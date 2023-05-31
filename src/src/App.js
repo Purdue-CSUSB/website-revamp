@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, React } from 'react';
 import axios from 'axios';
 import './App.css';
 
@@ -11,7 +11,6 @@ function App() {
   const [selectedBlog, setSelectedBlog] = useState(null);
 
 /*   useEffect(() => {
-    console.log("AKLJSNAKJSDN");
     axios.get('http://localhost:5000/get-entries/')
     .then(res => setBlog(res.data))
     .catch(err => console.error(err));    
@@ -40,12 +39,12 @@ function App() {
        <div className="column1">
         <div>
           <h3>Add a Blog Entry</h3>
-          <p>Name</p>
+          <p>Title</p>
           <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
           <p>Author</p>
           <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
           <p>Body</p>
-          <input type="text" value={content} onChange={(e) => setContent(e.target.value)} />
+          <textarea  rows={4} cols={40} value={content} onChange={(e) => setContent(e.target.value)}/>
           <br></br>
           <button onClick={addBlog}>Add Blog</button>
         </div>

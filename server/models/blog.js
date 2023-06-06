@@ -10,15 +10,22 @@ const blog = new Schema({
       }, 
       name: {
         type: String,
+        unique: true,
         //required: true
       },
       author: {
         type: String,
         //required: true
       },
-      content: {
+      // link to image stored in s3 bucket
+      image: {
         type: String,
         //required: true
+      },
+      // link to pdf stored in s3 bucket
+      content: {
+        type: String,
+        //equired: true
       },
     });
 

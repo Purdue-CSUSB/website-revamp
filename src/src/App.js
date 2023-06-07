@@ -1,8 +1,19 @@
-import { useState, useEffect, React } from 'react';
+import { useState, useEffect, React } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from  "react-router-dom";
 import './App.css';
+import Wiki from "./Wiki.js"; 
+
 
 function App() {
+
+  
+  const navigate = useNavigate();
+  const goToWiki = () => {
+    navigate("./Wiki");
+  }
+
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
@@ -35,6 +46,9 @@ function App() {
     setSelectedBlog(c);
   };
   return (
+
+    
+
     <div className="body">
        <div className="column1">
         <div>
@@ -47,8 +61,16 @@ function App() {
           <textarea  rows={4} cols={40} value={content} onChange={(e) => setContent(e.target.value)}/>
           <br></br>
           <button onClick={addBlog}>Add Blog</button>
+          <button onClick={ goToWiki }>Student Wiki</button>
+
+          <Routes>
+              <Route path = "/wiki" element = { < Wiki /> } />
+            </Routes>
+
         </div>
+
     </div>
+    
 {/*     <div className="column2">
         <div>
           <h3>Select a Blog Entry</h3>
@@ -65,7 +87,6 @@ function App() {
         </div>} */}
     {/* </div> */}
     </div>
-    
     
   );
 }

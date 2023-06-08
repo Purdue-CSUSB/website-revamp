@@ -6,6 +6,7 @@ import './App.css';
 import { Home } from "./pages/Home";
 import { Wiki } from "./pages/Wiki";
 import { Blog } from "./pages/Blog";
+import Navbar from "./Navbar";
 
 
 function App() {
@@ -13,21 +14,9 @@ function App() {
   return ( 
 
     <>
-    <nav>
-      <ul>
-        <li>
-          <Link to = "/"> Home </Link>
-        </li>
-        <li>
-          <Link to = "/blog"> Blog </Link>
-        </li>
-        <li>
-          <Link to = "/wiki"> Student Wiki </Link>
-        </li>
-      </ul>
 
-    </nav>
-  
+    <Navbar />
+
     <Routes>
       <Route path = "/" element={<Home />}  />
       <Route path = "/wiki" element={<Wiki />}  />

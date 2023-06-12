@@ -53,7 +53,7 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
    ];
    const responses = await Promise.all(params.map(param =>
       s3.upload(param).promise()))
-   console.log(responses)
+   //console.log(responses)
    
    try {
       await client.connect();
@@ -63,6 +63,7 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
          let blog = {
             name: req.body.name, 
             author: req.body.author, 
+            summary: req.body.summary,
             image: responses[0].Location, 
             content: responses[1].Location
          }

@@ -17,6 +17,9 @@ const blog = new Schema({
         type: String,
         //required: true
       },
+      summary: {
+        type: String,
+      },
       // link to image stored in s3 bucket
       image: {
         type: String,

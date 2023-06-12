@@ -3,13 +3,15 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import axios from 'axios';
 import './App.css';
 
+import Button from '@mui/material/Button';
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function App() {
 
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  //const [content, setContent] = useState("");
+  const [summary, setSummary] = useState("");
 
   const [selectedFile, setSelectedFile] = useState();
   const [selectedImage, setSelectedImage] = useState();
@@ -42,6 +44,7 @@ function App() {
     formData.append('files', selectedImage)
     formData.append('files', selectedFile)
     formData.append('name', title)
+    formData.append('summary', summary)
     formData.append('author', author)
    // formData.append('content', content)
 
@@ -84,12 +87,14 @@ function App() {
           <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
           <p>Author</p>
           <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
+          <p>Enter a brief summary</p>
+          <input type="text" value={summary} onChange={(e) => setSummary(e.target.value)} />
           <p>Upload image</p>
           <input type = "file" name="file" onChange={uploadImage} />
           <p>Body</p>
           <input type = "file" name="file" onChange={uploadFile}/>
           <br></br><br></br>
-          <button onClick={addBlog}>Add Blog</button>
+          <Button variant = "outlined" onClick={addBlog}>Add Blog</Button>
         </div>
     </div>
     <div className="column2">
@@ -104,6 +109,8 @@ function App() {
         </div> 
         {blogName && <div>
           <h3>{blogName.name}</h3>
+          <p>{blogName.summary}</p>
+          <img src = {blogName.image} />
           <p>{<Document file= {blogName.content} onLoadSuccess={onDocumentLoadSuccess}>
               <Page pageNumber = {2} />
             </Document>}

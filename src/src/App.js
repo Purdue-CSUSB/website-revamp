@@ -8,7 +8,6 @@ import { Wiki } from "./pages/Wiki";
 import { Blog } from "./pages/Blog";
 import Navbar from "./Navbar";
 
-
 function App() {
 
   return ( 

@@ -1,3 +1,6 @@
+{ /*
+
+
 const express = require("express");
 const blog = require("./models/blog.js");
 
@@ -44,6 +47,10 @@ app.get("/get-entries", async (req, res) => {
    }
 
 
-}); */
+}); 
+
+
 
 module.exports = app;
+
+*/ }

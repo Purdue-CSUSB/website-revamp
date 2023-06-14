@@ -1,3 +1,5 @@
+{/*}
+
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
@@ -23,3 +25,5 @@ const blog = new Schema({
     });
 
 module.exports = model("blog", blog);
+
+  */}

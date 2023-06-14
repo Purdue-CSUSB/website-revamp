@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.image {
+  height: 20rem;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.column1 {
+  margin-right: 10rem;
+  width: 20rem;
+}
+
+.column2 {
+  margin-right: 10rem;
+  width: 20rem;
+}

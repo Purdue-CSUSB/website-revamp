@@ -1,5 +1,6 @@
 import { useState, useEffect, React } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf'
+import {Link} from 'react-router-dom'
 import axios from 'axios';
 import './App.css';
 
@@ -8,7 +9,21 @@ import Button from '@mui/material/Button';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function App() {
-
+  return (
+    <div className = "body">
+      <Link to= "./addBlog">
+        <Button variant = "outlined">
+          Add a blog!
+        </Button>
+      </Link>
+      <Link to= "./displayBlog">
+        <Button variant = "outlined">
+          Display Blogs!
+        </Button>
+      </Link>
+    </div>
+  );
+/*
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [summary, setSummary] = useState("");
@@ -26,7 +41,7 @@ function App() {
     /* if (selectedBlog) {
       axios.post("/get-blog", selectedBlog)
       .then(blogName => setBlogName(res.data))
-    }  */
+    }  
     axios.get('http://localhost:5000/get-entries/')
     .then(res => setBlog(res.data))
     .catch(err => console.error(err));   
@@ -59,12 +74,19 @@ function App() {
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
-
+  function makeButton(blog) {
+    return (
+        <Button 
+            variant = "outlined"
+            onClick={() => handleBlogSelect(blog._id)}> 
+            {blog.name}
+        </Button>
+    );
+}
   const handleBlogSelect = (e) => {
-    const c = e.target.value;
-    console.log(c)
-    setSelectedBlog(c);
-    setBlogName(blog.find((code) => code._id === c));
+    console.log(e)
+    setSelectedBlog(e);
+    setBlogName(blog.find((code) => code._id === e));
   };
 
   const uploadImage = (e) => {
@@ -78,6 +100,7 @@ function App() {
     setSelectedFile(e.target.files[0]);
     return;
   }
+
   return (
     <div className="body">
        <div className="column1">
@@ -107,6 +130,13 @@ function App() {
               ))}
             </select>
         </div> 
+        <div>
+          <h3>displayed blogs</h3>
+          {
+            blog.map(makeButton, this)
+            
+          }
+        </div>
         {blogName && <div>
           <h3>{blogName.name}</h3>
           <p>{blogName.summary}</p>
@@ -121,6 +151,7 @@ function App() {
     
     
   );
+  */
 }
 
 export default App;

@@ -32,7 +32,7 @@ export class Wiki extends React.Component {
         if (!posts.length) return null;
 
         return posts.map((post, index) => (
-            <div key = {index}>
+            <div key = {index} className = "wikipost-display">
                 <h3>{post.title}</h3>
                 <p>{post.description}</p>
             </div>
@@ -51,7 +51,7 @@ export class Wiki extends React.Component {
             </center>
         </h2>
 
-        <div className = "wikipost">
+        <div>
             {this.displayWikiPost(this.state.posts)}
         </div>
 

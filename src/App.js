@@ -13,16 +13,7 @@ function App() {
   <Navbar />
   return (
     <div className = "body">
-      <Link to= "./addBlog">
-        <Button variant = "outlined">
-          Add a blog!
-        </Button>
-      </Link>
-      <Link to= "./displayBlog">
-        <Button variant = "outlined">
-          Display Blogs!
-        </Button>
-      </Link>
+      
     </div>
   );
 /*

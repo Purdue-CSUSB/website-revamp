@@ -47,14 +47,6 @@ function DisplayBlog() {
         </Grid>
       );
   }
-    const handleBlogSelect = (e) => {
-      console.log(e)
-      setSelectedBlog(e);
-      setBlogName(blogs.find((code) => code._id === e));
-    };
-    function onDocumentLoadSuccess({ numPages }) {
-      setNumPages(numPages);
-    }
     return (
       <div className = "body">
       <h3>Blogs</h3>

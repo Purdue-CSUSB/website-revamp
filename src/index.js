@@ -6,17 +6,21 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App";
+import Navbar from "./Navbar";
 import AddBlog from "./AddBlog";
 import DisplayBlog from "./DisplayBlog";
 import BlogPost from './BlogPost';
+import Wiki from './Wiki';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <Navbar />
        <Routes>
         <Route exact path="/" element ={<App/>} />
+        <Route path = "/wiki" element={<Wiki />}  />
         <Route path="/addBlog" element={<AddBlog/>} />
         <Route path = "/displayBlog" element = {<DisplayBlog/>} />
         <Route path = "/blogPost" element = {<BlogPost/>} />

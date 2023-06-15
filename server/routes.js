@@ -12,7 +12,7 @@ const multerS3 = require("multer-s3");
 
 const {MongoClient} = require("mongodb");
 
-const uri = CONNECTION = "mongodb+srv://Arielle:ssu8ACxFolEqshob@blogs.yxjjb5i.mongodb.net/Blogs"
+const uri = process.env.CONNECTION
 
 const client = new MongoClient(uri);
 
@@ -90,6 +90,18 @@ app.get("/get-entries", async (req, res) => {
       res.status(400).send(err.message);
    }
 });
+
+app.get('/get-wiki-posts', async (req, res) => {
+   try {
+      await client.connect();
+
+      res.json(await client.db("Blogs").collection("wikiposts").find().toArray());
+
+   } catch(err) {
+      res.status(400).send(err.message)
+   }
+});
+
 /*
 app.post("/upload-image", upload.single(file), async(req, res) => {
    const params = {

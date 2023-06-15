@@ -2,6 +2,7 @@ import { useState, useEffect, React } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf'
 import {Link} from 'react-router-dom'
 import axios from 'axios';
+import Navbar from "./Navbar";
 import './App.css';
 
 import Button from '@mui/material/Button';
@@ -9,6 +10,7 @@ import Button from '@mui/material/Button';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function App() {
+  <Navbar />
   return (
     <div className = "body">
       <Link to= "./addBlog">

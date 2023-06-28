@@ -64,7 +64,8 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
             name: req.body.name, 
             author: req.body.author, 
             summary: req.body.summary,
-            image: responses[0].Location, 
+            image: responses[0].Location,
+            format: req.body.format, 
             content: responses[1].Location
          }
 

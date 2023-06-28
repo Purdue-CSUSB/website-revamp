@@ -2,10 +2,6 @@
     text-align: center;
   }
   
-  .image {
-    height: 20rem;
-  }
-  
   .body {
     display: flex;
     justify-content: center;

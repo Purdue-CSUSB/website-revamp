@@ -15,6 +15,7 @@ function AddBlog() {
 
   const [selectedFile, setSelectedFile] = useState();
   const [selectedImage, setSelectedImage] = useState();
+  const [format, setFormat] = useState("");
 
   const [blog, setBlog] = useState([]);
   const [selectedBlog, setSelectedBlog] = useState(null);
@@ -35,7 +36,7 @@ function AddBlog() {
 }, [selectedBlog, blogName]); 
 
   const addBlog = () => {
-    if (title === "" || author === "") {
+    if (title === "" || author === "" || summary === "" || !selectedImage || !selectedFile) {
       alert("Enter all data");
       return;
     }
@@ -46,6 +47,7 @@ function AddBlog() {
     formData.append('name', title)
     formData.append('summary', summary)
     formData.append('author', author)
+    formData.append('format', format)
    // formData.append('content', content)
 
     axios.post('http://localhost:5000/add-entry/', formData)
@@ -80,6 +82,13 @@ function AddBlog() {
           <input type="text" value={summary} onChange={(e) => setSummary(e.target.value)} />
           <p>Upload image</p>
           <input type = "file" name="file" onChange={uploadImage} />
+          <p>PDF or Markdown?</p>
+          <select value={format} 
+            onChange={(e) => setFormat(e.target.value)} 
+          >
+          <option value="PDF">PDF</option>
+          <option value="Markdown">Markdown</option>
+          </select>
           <p>Body</p>
           <input type = "file" name="file" onChange={uploadFile}/>
           <br></br><br></br>

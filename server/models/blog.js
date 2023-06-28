@@ -25,11 +25,15 @@ const blog = new Schema({
         type: String,
         //required: true
       },
+      format: {
+        type: String,
+      },
       // link to pdf stored in s3 bucket
       content: {
         type: String,
         //equired: true
       },
+
     });
 
 module.exports = model("blog", blog);

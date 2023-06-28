@@ -1,22 +1,32 @@
-.nav {
-
+.links {
     background-color: #ffc700;
     display: flex;
     justify-content: right;
-    align-items: center;
-    gap: 2rem;
     padding: 1rem;
+    gap: 2rem
 
 
 }
-
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    display: none;
+    pointer-events: none;
+}
+.nav {
+    padding-top: 0.5rem;
+}
 .nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
 
 }
-
+.logo {
+    padding-left: 2rem;
+    justify-content: left !important;
+    max-width: 50px;
+    margin-bottom: -65px;
+    background-color: #ffc700;
+}
 .nav a {
     color: black;
     text-decoration: none;

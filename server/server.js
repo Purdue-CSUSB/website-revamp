@@ -24,10 +24,9 @@ app.use(Router);
 
 // use dotenv to secure this password later on
 
-const uri = CONNECTION = "mongodb+srv://Arielle:ssu8ACxFolEqshob@blogs.yxjjb5i.mongodb.net/Blogs";
+const uri = CONNECTION = "mongodb+srv://admin:dZWpFuRdDtoMBTQi@blogs.yxjjb5i.mongodb.net/Blogs";
 
 //const URI = "mongodb+srv://Arielle:ssu8ACxFolEqshob@blogs.yxjjb5i@blogs.yxjjb5i.mongodb.net/?retryWrites=true&w=majority";
-
 
 
 mongoose.connect(CONNECTION)

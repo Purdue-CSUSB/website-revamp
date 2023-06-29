@@ -1,9 +1,9 @@
-
 .h1 {
     font-size: 30px;
     margin-bottom: 0;
 
 }
+
 .h2 {
     font-size: 18px;
     margin-bottom: 100px;
@@ -13,5 +13,11 @@
     border: 1px solid black;
     margin: 5px 375px;
     border-radius: 5px;
-    text-align:center;
+    text-align: center;
+
+}
+
+.wiki-scroll {
+    overflow-y: auto;
+    max-height: 300px;
 }

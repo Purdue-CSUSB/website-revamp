@@ -1,5 +1,4 @@
 
-
 .h1 {
     font-size: 30px;
     margin-bottom: 0;
@@ -15,11 +14,4 @@
     margin: 5px 375px;
     border-radius: 5px;
     text-align:center;
-   
 }
-.wiki-scoll {
-    overflow-y: auto;
-    max-height: 100px;
-}
-
-

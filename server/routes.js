@@ -1,3 +1,5 @@
+
+
 const express = require("express");
 const blog = require("./models/blog.js");
 
@@ -112,20 +114,9 @@ app.post("/upload-image", upload.single(file), async(req, res) => {
       ACL:"public-read-write",
   };
 
-   s3.upload(params, (error, data)=>{
-      if(error){
-          console.log(error);
-          res.status(500).send({"err":error})
-      }
+}); 
 
-      console.log(data)
 
-      
-  })
-})
-app.post("/upload-body", upload.single(file), async(req, res) => {
-
-})
-*/
 
 module.exports = app;
+

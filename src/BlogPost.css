@@ -27,7 +27,11 @@ p1 {
     max-width: fit-content;
     min-width: auto;
     align-content: justify;
-    text-align: justify;
+    text-align: left;
+}
+.markdown{
+    max-width: 85%;
+    margin-left: 7%
 }
 .react-pdf__Page__canvas {
     width: 100% !important;

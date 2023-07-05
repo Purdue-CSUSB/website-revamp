@@ -4,11 +4,8 @@
     justify-content: right;
     padding: 1rem;
     gap: 2rem
-
-
 }
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-    display: none;
+nav .usbButton {
     pointer-events: none;
 }
 .nav {
@@ -19,6 +16,13 @@
     display: flex;
     gap: 1rem;
 
+}
+
+nav .hamburger {
+    display: none;
+    padding: 10px;
+    margin: 2px;
+    background-color: grey;
 }
 .logo {
     padding-left: 2rem;
@@ -31,4 +35,30 @@
     color: black;
     text-decoration: none;
 
+}
+
+@media screen and (max-width : 760px) {
+    .links {
+        background-color: #ffc700;
+        display: flex;
+        justify-content: right;
+        padding: 2rem;
+        gap: 2rem
+        }
+    .usbButton {
+        pointer-events: all;
+    }
+    nav .hamburger {
+        margin-top: -1rem;
+        display: flex;
+        margin-right: -5%;
+        background-color: #ffc700;
+    }
+    .nav ul {
+        flex-direction: column;
+        display: none;
+    }
+    .hamburger:hover + ul { 
+        display: flex
+    }
 }

@@ -1,5 +1,5 @@
 # website-revamp
-## Repository for all files relating to the Website Revamp project (2023)
+** Repository for all files relating to the Website Revamp project (2023) **
 ### Setup Instructions
 1. Create a virtual environment. On Mac, that would be `python3 -m venv venv`. To activate this virtual environment, `cd venv` and run `source bin/activate`. Please `cd ..` out of the venv directory to install the necessary packages.
 2. Open two terminals. In the first terminal, to set up the server, run `cd server`. In both the parent directory and server terminal, run `npm install`. Note, there might be other requirements to `npm install`. 

@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App";
 import Navbar from "./Navbar";
+import Landing from "./Landing";
 import AddBlog from "./AddBlog";
 import DisplayBlog from "./DisplayBlog";
 import BlogPost from './BlogPost';
@@ -17,6 +18,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <head>
+      <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" 
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
+    </head>
     <Navbar />
        <Routes>
         <Route exact path="/" element ={<App/>} />
@@ -26,6 +37,7 @@ root.render(
         <Route path = "/blogPost" element = {<BlogPost/>} />
         </Routes>
       </BrowserRouter>
+    <Landing />
   </React.StrictMode>
 );
 

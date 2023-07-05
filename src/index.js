@@ -27,17 +27,17 @@ root.render(
         rel="stylesheet"
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
       />
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
     </head>
     <Navbar />
        <Routes>
-        <Route exact path="/" element ={<App/>} />
+        <Route exact path="/" element ={<Landing />} />
         <Route path = "/wiki" element={<Wiki />}  />
         <Route path="/addBlog" element={<AddBlog/>} />
         <Route path = "/displayBlog" element = {<DisplayBlog/>} />
         <Route path = "/blogPost" element = {<BlogPost/>} />
         </Routes>
       </BrowserRouter>
-    <Landing />
   </React.StrictMode>
 );
 

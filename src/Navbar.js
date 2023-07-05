@@ -11,7 +11,7 @@ export default function Navbar() {
                     <Button hover>
                     <img src = {require('./logo.png')}/> 
                     </Button>
-                    </Link>
+                </Link>
         </div>
         <div className="links">
 

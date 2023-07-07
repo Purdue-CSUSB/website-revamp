@@ -36,11 +36,12 @@ function AddBlog() {
 }, [selectedBlog, blogName]); 
 
   const addBlog = () => {
-    if (title === "" || author === "" || summary === "" || !selectedImage || !selectedFile) {
+    if (title === "" || author === "" || summary === "" || !selectedImage || !selectedFile || format == "") {
       alert("Enter all data");
       return;
     }
     console.log(selectedFile);
+    console.log(format)
     const formData = new FormData();
     formData.append('files', selectedImage)
     formData.append('files', selectedFile)
@@ -83,17 +84,21 @@ function AddBlog() {
           <p>Upload image</p>
           <input type = "file" name="file" onChange={uploadImage} />
           <p>PDF or Markdown?</p>
-          <select value={format} 
-            onChange={(e) => setFormat(e.target.value)} 
-          >
-          <option value="PDF">PDF</option>
-          <option value="Markdown">Markdown</option>
+          <select value={format} onChange={(e) => setFormat(e.target.value)} >
+            <option value="PDF">PDF</option>
+            <option value="Markdown">Markdown</option>
           </select>
           <p>Body</p>
           <input type = "file" name="file" onChange={uploadFile}/>
           <br></br><br></br>
           <Button variant = "outlined" onClick={addBlog}>Add Blog</Button>
         </div>
+    </div>
+    <div className='column2'>
+      <div>
+        <h3> Add categories </h3>
+        <p>Choose from existing categories</p>
+      </div>
     </div>
     </div>
   );

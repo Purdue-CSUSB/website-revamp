@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import './Navbar.css';
 import Button from '@mui/material/Button';
+
 export default function Navbar() {
     return (
         
@@ -8,13 +9,13 @@ export default function Navbar() {
             
             <div className="logo">
                 <Link to = "/">
-                    <Button hover>
+                    <Button className = "usbButton">
                     <img src = {require('./logo.png')}/> 
                     </Button>
                 </Link>
         </div>
         <div className="links">
-
+        <Button className="hamburger">M</Button>
         <ul>
             <li>
             <Link to = "/"> Home </Link>

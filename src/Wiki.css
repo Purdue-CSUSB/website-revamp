@@ -1,3 +1,4 @@
+
 .h1 {
     font-size: 30px;
     margin-bottom: 0;
@@ -8,13 +9,17 @@
     margin-bottom: 3rem;
 
 }
+.content {
+    display: flex;
+    column-gap: 9%;
+}
 
 input{
     margin: auto;
     display: block;
     margin-bottom: 2rem;
     border-radius: 3rem;
-    width: 39rem;
+    width: 40%;
     height: 2.5rem;
     padding-left: 2rem;
     background: transparent url("images/search-icon.svg") no-repeat 10px; 
@@ -26,11 +31,28 @@ input{
     border-width: 1.5px;
 }
 
+.category-filter {
+
+    background-color: yellow;
+    height: 20rem;
+    width: 17%;
+    margin-left: 3rem;
+    margin-top: 4rem;
+    /* margin-right: 50px; */
+    border-radius: 0.7rem;
+
+}
+
 .wikipost-display {
+    display: block;
     border: 1px solid black;
-    margin: 5px 375px;
+    /* margin: 5px 375px; */
     border-radius: 10px;
     text-align: center;
+    width: 41vw;
+    display: block;
+    margin: auto;
+    
 
 }
 

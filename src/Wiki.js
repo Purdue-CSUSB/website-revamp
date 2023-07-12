@@ -1,7 +1,6 @@
 import React from "react";
 import './Wiki.css';
 import axios from 'axios';
-import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 
 
@@ -53,11 +52,13 @@ export default class Wiki extends React.Component {
         }
 
         return posts.map((post, index) => (
-            
-                <div key = {index} className = "wikipost-display">
-                    <h3>{post.title}</h3>
-                    <p>{post.description}</p>
-                </div>
+
+            <div key = {index} className = "wikipost-display">
+                <h3>{post.title}</h3>
+                <p>{post.description}</p>
+            </div>
+
+    
         ));
 
     };
@@ -73,7 +74,7 @@ export default class Wiki extends React.Component {
     render() {
 
     return (
-        <div>
+        <div className = "container">
             <h1 className = "h1"> <center> Student Wiki </center> </h1>
             <h3 className = "h3">
                 <center>
@@ -81,11 +82,25 @@ export default class Wiki extends React.Component {
                 </center>
             </h3>
 
+
+
             <input type="text" onChange={(e)=>this.searchSpace(e)} />
 
-            <div className = "wiki-scroll">
-                {this.displayWikiPost(this.state.posts)}
-            </div>
+            <div className = "content">
+
+                <div className = "category-filter">
+                </div>
+
+                <div className = "wiki-scroll">
+                    {this.displayWikiPost(this.state.posts)}
+                </div>
+
+            </div>  
+
+           
+
+
+            
 
 
         </div>

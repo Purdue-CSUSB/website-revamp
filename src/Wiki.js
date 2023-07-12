@@ -52,6 +52,7 @@ export default class Wiki extends React.Component {
 
         }
 
+
         return posts.map((post, index) => (
 
             <div key = {index} className = "wikipost-display">
@@ -67,15 +68,50 @@ export default class Wiki extends React.Component {
     searchSpace=(event)=>{
         let keyword = event.target.value;
         this.setState({search:keyword})
-        console.log(this.state.search);
+        console.log(this.state.search)
       }
+
+
+    showFilteredWikis= (event) => {
+
+        let keyword = event.target.value;
+        this.setState({filter:keyword});
+    
+        if (this.state.filter != "") {
+            console.log("registered");
+            const filterResults = this.state.posts.filter(post => post.category.toLowerCase().includes(this.state.filter.toLowerCase()));
+            console.log(filterResults);
+            return filterResults.map((query, index) => (
+            
+                <div key = {index} className = "wikipost-display">
+                    <h3>{query.title}</h3>
+                    <p>{query.description}</p>
+                </div>
+        ));
+
+        }
+
+
+        return this.state.posts.map((post, index) => (
+
+            <div key = {index} className = "wikipost-display">
+                <h3>{post.title}</h3>
+                <p>{post.description}</p>
+            </div>
+
+    
+        ));
+
+    };
+
+
 
         
 
     render() {
 
     return (
-        <div className = "container">
+        <div>
             <h1 className = "h1"> <center> Student Wiki </center> </h1>
             <h3 className = "h3">
                 <center>
@@ -93,25 +129,41 @@ export default class Wiki extends React.Component {
                     <div className = "category">
                         <p> Technical </p> 
                         <label>
-                            <input type = "checkbox" defaultChecked = {false} />
+                            <input
+                                type = "checkbox" defaultChecked = {false}
+                                value = "technical"
+                                onChange = {this.showFilteredWikis}
+                            />
                         </label>
                     </div>
                     <div className = "category">
                         <p> Campus </p> 
                         <label>
-                            <input type = "checkbox" defaultChecked = {false} />
+                            <input
+                                type = "checkbox" defaultChecked = {false}
+                                value = "campus"
+                                onChange = {this.showFilteredWikis}
+                            /> 
                         </label>
                     </div>
                     <div className = "category">
                         <p> Calendar Events </p> 
                         <label>
-                            <input type = "checkbox" defaultChecked = {false} />
+                            <input
+                                type = "checkbox" defaultChecked = {false}
+                                value = "calendar events"
+                                onChange = {this.showFilteredWikis}
+                            />
                         </label>
                     </div>
                     <div className = "category">
                         <p> Clubs </p> 
                         <label>
-                            <input type = "checkbox" defaultChecked = {false} />
+                            <input
+                                type = "checkbox" defaultChecked = {false}
+                                value = "clubs"
+                                onChange = {this.showFilteredWikis}
+                            /> 
                         </label>
                     </div>
 

@@ -29,6 +29,9 @@ export default function Navbar() {
             <li>
             <Link to = "/wiki"> Student Wiki </Link>
             </li>
+            <li>
+            <Link to = "/initiatives"> Initiatives </Link>
+            </li>
         </ul>
         </div>
 

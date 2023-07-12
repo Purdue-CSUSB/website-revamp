@@ -35,7 +35,7 @@ export default function Landing() {
                 <Grid container spacing={2}>
                     <Grid item xs={6}>
                         <Item>xs=6</Item>
-                        <Link to = "#">
+                        <Link to = "/initiatives">
                             <Button hover variant="contained">Our Initiatives</Button>
                         </Link>
                     </Grid>

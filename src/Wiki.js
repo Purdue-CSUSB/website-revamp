@@ -75,14 +75,13 @@ export default class Wiki extends React.Component {
     return (
         <div>
             <h1 className = "h1"> <center> Student Wiki </center> </h1>
-            <h2 className = "h2">
+            <h3 className = "h3">
                 <center>
                 Contains locally sourced, organic wisdom. Shared by the student body, curated by USB
                 </center>
-            </h2>
+            </h3>
 
-            <input type="text" placeholder="Search" onChange={(e)=>this.searchSpace(e)} />
-
+            <input type="text" onChange={(e)=>this.searchSpace(e)} />
 
             <div className = "wiki-scroll">
                 {this.displayWikiPost(this.state.posts)}

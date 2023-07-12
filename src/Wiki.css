@@ -3,21 +3,38 @@
     margin-bottom: 0;
 
 }
-
-.h2 {
+.h3 {
     font-size: 18px;
-    margin-bottom: 100px;
+    margin-bottom: 3rem;
+
+}
+
+input{
+    margin: auto;
+    display: block;
+    margin-bottom: 2rem;
+    border-radius: 3rem;
+    width: 39rem;
+    height: 2.5rem;
+    padding-left: 2rem;
+    background: transparent url("images/search-icon.svg") no-repeat 10px; 
+    background-size: 20px 20px;   
+    text-indent: 0.7rem;    
+    font-size: 18px;
+    border-color: gray;
+    border-style: solid;
+    border-width: 1.5px;
 }
 
 .wikipost-display {
     border: 1px solid black;
     margin: 5px 375px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
 
 }
 
 .wiki-scroll {
     overflow-y: auto;
-    max-height: 300px;
+    max-height: 28.125rem;
 }

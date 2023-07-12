@@ -10,7 +10,8 @@ export default class Wiki extends React.Component {
     state = {
         posts: [],
         setPosts: [],
-        search: ""
+        search: "",
+        filter: ""
     }
 
     componentDidMount = () => {
@@ -89,6 +90,32 @@ export default class Wiki extends React.Component {
             <div className = "content">
 
                 <div className = "category-filter">
+                    <div className = "category">
+                        <p> Technical </p> 
+                        <label>
+                            <input type = "checkbox" defaultChecked = {false} />
+                        </label>
+                    </div>
+                    <div className = "category">
+                        <p> Campus </p> 
+                        <label>
+                            <input type = "checkbox" defaultChecked = {false} />
+                        </label>
+                    </div>
+                    <div className = "category">
+                        <p> Calendar Events </p> 
+                        <label>
+                            <input type = "checkbox" defaultChecked = {false} />
+                        </label>
+                    </div>
+                    <div className = "category">
+                        <p> Clubs </p> 
+                        <label>
+                            <input type = "checkbox" defaultChecked = {false} />
+                        </label>
+                    </div>
+
+
                 </div>
 
                 <div className = "wiki-scroll">

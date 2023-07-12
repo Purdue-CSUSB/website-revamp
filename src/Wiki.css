@@ -33,15 +33,43 @@ input{
 
 .category-filter {
 
-    background-color: yellow;
-    height: 20rem;
+    background-color: #FFF9E3;
+    height: 25rem;
     width: 17%;
     margin-left: 3rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
     /* margin-right: 50px; */
     border-radius: 0.7rem;
+    align-items: center;
 
 }
+
+.category {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    font-size: 5px;
+
+}
+
+label {
+
+    width: 25%;
+    height: 25%;
+    justify-content: right;
+    align-items: center;
+    margin-top: 30px;
+}
+
+p {
+
+    font-size: 14px;
+
+}
+
 
 .wikipost-display {
     display: block;
@@ -60,3 +88,4 @@ input{
     overflow-y: auto;
     max-height: 28.125rem;
 }
+

@@ -8,13 +8,16 @@ const member= new Schema({
       type: String,
       unique: true
     }, 
-    profile: {
+    picture: {
       type: String,
       unique: true
-  },
+    },
+    standing: {
+      type: String,
+    },
     linkedIn: {
         type: String
-    }
+    },
 
 })
 

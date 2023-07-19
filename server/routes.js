@@ -71,6 +71,7 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
 
          const bl = client.db("Blogs").collection("Entries").insertOne(blog);
          res.status(200).send("success");
+         
       } catch (err) {
          res.status(404).send(err.message);
       }
@@ -80,7 +81,89 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
    
 
 });
+app.post("/add-initiative", async(req, res) => {
+   await client.connect();
+   console.log('aaksjdnfakjdsnfakjsdnfakjsfn')
+   console.log(req.body)
+   try {
+      let initiative = {
+         name: req.body.name,
+         summary: req.body.description,
+         members: req.body.members,
+         link: req.body.link,
+         linkDescription: req.body.linkDescription
 
+      }
+      console.log(req.body.name)
+      const bl = client.db("Blogs").collection("Initiatives").insertOne(initiative);
+      res.status(200).send("success");
+   }
+   catch (err) {
+         res.status(404).send(err.message);
+      }
+})
+app.post("/add-member", upload.single("file"), async(req,res) => {
+   console.log(req.file)
+   const params = {
+      Bucket:process.env.AWS_BUCKET_NAME,
+      Key:req.file.originalname,     
+      Body:req.file.buffer,
+      ACL:"public-read-write",
+   }
+   try {
+      await client.connect();
+       s3.upload(params, (error,data)=>{
+        if(error){
+            console.log(error);
+            res.status(500).send({"err":error})
+        }
+         let member = {
+            name: req.body.name, 
+            picture: data.Location,
+            standing: req.body.standing,
+            linkedIn: req.body.linkedIn
+         }
+
+         const bl = client.db("Blogs").collection("Members").insertOne(member);
+         res.status(200).send("success");
+       })
+   } catch (err) {
+      res.status(406).send(err.message);
+   } 
+
+})
+app.get("/members", async(req, res) => {
+   try {
+      await client.connect();
+      res.json(await client.db("Blogs").collection("Members").find().toArray())
+   } catch(err) {
+      res.status(400).send(err.message)
+   }
+})
+app.get("/graduated", async(req, res) => {
+   try {
+      await client.connect();
+
+      const members = await client.db("Blogs").collection("Members").find({
+         "standing": "Graduated"
+      }).toArray()
+      res.json(members)
+   }catch(err) {
+      res.status(400).send(err.message)
+   }
+})
+app.get("/current-members", async(req, res) => {
+   try {
+      await client.connect();
+
+      const grads = await client.db("Blogs").collection("Members").find({
+         "standing": { $ne : "Graduated"}
+      }).toArray()
+      res.json(grads)
+   }catch(err) {
+      res.status(400).send(err.message)
+   }
+})
 app.get("/get-entries", async (req, res) => {
    try {
       await client.connect();

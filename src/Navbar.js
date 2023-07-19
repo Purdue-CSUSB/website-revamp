@@ -21,7 +21,7 @@ export default function Navbar() {
             <Link to = "/"> Home </Link>
             </li>
             <li>
-            <Link to = "/addBlog"> Add a Blog </Link>
+            <Link to = "/addBlog"> Add Stuff </Link>
             </li>
             <li>
             <Link to = "/displayBlog"> See Blogs </Link>

@@ -6,7 +6,12 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 
-const Aws = require("aws-sdk");
+const {
+         Upload
+      } = require("@aws-sdk/lib-storage"),
+      {
+         S3
+      } = require("@aws-sdk/client-s3");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
 
@@ -22,7 +27,8 @@ const storage = multer.memoryStorage({
    }
 })
 
-const s3 = new Aws.S3({
+const s3 = new S3({
+   region: "us-east-2",
    accessKeyId:process.env.AWS_ACCESS_KEY_ID,
    secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY
 })
@@ -52,7 +58,10 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
       }
    ];
    const responses = await Promise.all(params.map(param =>
-      s3.upload(param).promise()))
+      new Upload({
+         client: s3,
+         params: param
+      }).done()))
    //console.log(responses)
    
    try {
@@ -83,8 +92,6 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
 });
 app.post("/add-initiative", async(req, res) => {
    await client.connect();
-   console.log('aaksjdnfakjdsnfakjsdnfakjsfn')
-   console.log(req.body)
    try {
       let initiative = {
          name: req.body.name,
@@ -94,7 +101,6 @@ app.post("/add-initiative", async(req, res) => {
          linkDescription: req.body.linkDescription
 
       }
-      console.log(req.body.name)
       const bl = client.db("Blogs").collection("Initiatives").insertOne(initiative);
       res.status(200).send("success");
    }
@@ -103,7 +109,6 @@ app.post("/add-initiative", async(req, res) => {
       }
 })
 app.post("/add-member", upload.single("file"), async(req,res) => {
-   console.log(req.file)
    const params = {
       Bucket:process.env.AWS_BUCKET_NAME,
       Key:req.file.originalname,     
@@ -112,22 +117,21 @@ app.post("/add-member", upload.single("file"), async(req,res) => {
    }
    try {
       await client.connect();
-       s3.upload(params, (error,data)=>{
-        if(error){
-            console.log(error);
-            res.status(500).send({"err":error})
-        }
-         let member = {
+         const response = await new Upload({
+            client: s3,
+            params
+         }).done()
+         const member = {
             name: req.body.name, 
-            picture: data.Location,
+            picture: response.Location,
             standing: req.body.standing,
             linkedIn: req.body.linkedIn
          }
-
          const bl = client.db("Blogs").collection("Members").insertOne(member);
          res.status(200).send("success");
-       })
+       
    } catch (err) {
+      console.log(err.message)
       res.status(406).send(err.message);
    } 
 

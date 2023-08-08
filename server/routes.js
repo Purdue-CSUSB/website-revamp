@@ -6,7 +6,12 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 
-const Aws = require("aws-sdk");
+const {
+         Upload
+      } = require("@aws-sdk/lib-storage"),
+      {
+         S3
+      } = require("@aws-sdk/client-s3");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
 
@@ -22,7 +27,8 @@ const storage = multer.memoryStorage({
    }
 })
 
-const s3 = new Aws.S3({
+const s3 = new S3({
+   region: "us-east-2",
    accessKeyId:process.env.AWS_ACCESS_KEY_ID,
    secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY
 })
@@ -52,7 +58,10 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
       }
    ];
    const responses = await Promise.all(params.map(param =>
-      s3.upload(param).promise()))
+      new Upload({
+         client: s3,
+         params: param
+      }).done()))
    //console.log(responses)
    
    try {
@@ -71,6 +80,7 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
 
          const bl = client.db("Blogs").collection("Entries").insertOne(blog);
          res.status(200).send("success");
+         
       } catch (err) {
          res.status(404).send(err.message);
       }
@@ -80,7 +90,84 @@ app.post("/add-entry", upload.array("files", 2), async (req, res) => {
    
 
 });
+app.post("/add-initiative", async(req, res) => {
+   await client.connect();
+   try {
+      let initiative = {
+         name: req.body.name,
+         summary: req.body.description,
+         members: req.body.members,
+         link: req.body.link,
+         linkDescription: req.body.linkDescription
 
+      }
+      const bl = client.db("Blogs").collection("Initiatives").insertOne(initiative);
+      res.status(200).send("success");
+   }
+   catch (err) {
+         res.status(404).send(err.message);
+      }
+})
+app.post("/add-member", upload.single("file"), async(req,res) => {
+   const params = {
+      Bucket:process.env.AWS_BUCKET_NAME,
+      Key:req.file.originalname,     
+      Body:req.file.buffer,
+      ACL:"public-read-write",
+   }
+   try {
+      await client.connect();
+         const response = await new Upload({
+            client: s3,
+            params
+         }).done()
+         const member = {
+            name: req.body.name, 
+            picture: response.Location,
+            standing: req.body.standing,
+            linkedIn: req.body.linkedIn
+         }
+         const bl = client.db("Blogs").collection("Members").insertOne(member);
+         res.status(200).send("success");
+       
+   } catch (err) {
+      console.log(err.message)
+      res.status(406).send(err.message);
+   } 
+
+})
+app.get("/members", async(req, res) => {
+   try {
+      await client.connect();
+      res.json(await client.db("Blogs").collection("Members").find().toArray())
+   } catch(err) {
+      res.status(400).send(err.message)
+   }
+})
+app.get("/graduated", async(req, res) => {
+   try {
+      await client.connect();
+
+      const members = await client.db("Blogs").collection("Members").find({
+         "standing": "Graduated"
+      }).toArray()
+      res.json(members)
+   }catch(err) {
+      res.status(400).send(err.message)
+   }
+})
+app.get("/current-members", async(req, res) => {
+   try {
+      await client.connect();
+
+      const grads = await client.db("Blogs").collection("Members").find({
+         "standing": { $ne : "Graduated"}
+      }).toArray()
+      res.json(grads)
+   }catch(err) {
+      res.status(400).send(err.message)
+   }
+})
 app.get("/get-entries", async (req, res) => {
    try {
       await client.connect();

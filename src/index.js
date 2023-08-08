@@ -12,6 +12,7 @@ import AddBlog from "./AddBlog";
 import DisplayBlog from "./DisplayBlog";
 import BlogPost from './BlogPost';
 import Wiki from './Wiki';
+import Initiatives from './Initiatives';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -36,6 +37,7 @@ root.render(
         <Route path="/addBlog" element={<AddBlog/>} />
         <Route path = "/displayBlog" element = {<DisplayBlog/>} />
         <Route path = "/blogPost" element = {<BlogPost/>} />
+        <Route path = "/initiatives" element = {<Initiatives/>} />
         </Routes>
       </BrowserRouter>
   </React.StrictMode>

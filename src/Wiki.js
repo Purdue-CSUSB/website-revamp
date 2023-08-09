@@ -1,32 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Wiki.css';
 import axios from 'axios';
-import FormControl from 'react-bootstrap/FormControl';
+import { useState } from "react";
 
 
 
-export default class Wiki extends React.Component {
+//export default class Wiki extends React.Component {
 
-    state = {
+function Wiki() {
+
+
+    /*
+
+    const state = {
         posts: [],
         setPosts: [],
         search: "",
         filter: ""
     }
 
-    componentDidMount = () => {
-    this.getWikiPost();
-    };
+    */
+
+   //const componentDidMount = () => {
+       // getWikiPost();
+   // };
+
+    const [checked, setChecked] = useState(false);
+    const [posts, setPosts] = useState([]);
+    const [search, setSearch] = useState("");
 
     
 
-   getWikiPost = () => {
+   useEffect(() => {
         axios.get('http://localhost:5000/get-wiki-posts')
         .then((response) => {
-            const data = response.data;
-            this.setState({posts: data });
-            console.log(data);
-            console.log(this.state.posts);
+            //const data = response.data;
+            //console.log(data);
+            setPosts(response.data);
+            console.log(response.data);
             console.log("data received");
         })
         .catch(() => {
@@ -34,14 +45,16 @@ export default class Wiki extends React.Component {
         });
 
 
-    };
+    }, []);
 
-    displayWikiPost = (posts) => {
+    
+
+    const displayWikiPost = (posts) => {
 
         if (!posts.length) return null;
 
-        if (this.state.search != "") {
-            const searchResults = posts.filter(post => post.title.toLowerCase().includes(this.state.search.toLowerCase()));
+        if (search != "") {
+            const searchResults = posts.filter(post => post.title.toLowerCase().includes(search.toLowerCase()));
             return searchResults.map((query, index) => (
             
                 <div key = {index} className = "wikipost-display">
@@ -65,17 +78,26 @@ export default class Wiki extends React.Component {
 
     };
 
-    searchSpace=(event)=>{
+   const searchSpace=(event)=> {
         let keyword = event.target.value;
-        this.setState({search:keyword})
-        console.log(this.state.search)
+        setSearch(keyword);
       }
 
 
-    showFilteredWikis= (event) => {
 
-        let keyword = event.target.value;
-        this.setState({filter:keyword});
+    const checkedBox = (event) => {
+
+        setChecked(event.target.checked);
+        console.log(posts);
+    }
+
+
+    /* 
+
+
+    const showFilteredWikis= (posts) => {
+
+        if (!posts.length) return null;
     
         if (this.state.filter != "") {
             console.log("registered");
@@ -104,11 +126,9 @@ export default class Wiki extends React.Component {
 
     };
 
+    */
 
 
-        
-
-    render() {
 
     return (
         <div>
@@ -121,7 +141,7 @@ export default class Wiki extends React.Component {
 
 
 
-            <input type="text" onChange={(e)=>this.searchSpace(e)} />
+            <input type="text" onChange={searchSpace} />
 
             <div className = "content">
 
@@ -132,7 +152,7 @@ export default class Wiki extends React.Component {
                             <input
                                 type = "checkbox" defaultChecked = {false}
                                 value = "technical"
-                                onChange = {this.showFilteredWikis}
+                                onChange = {checkedBox}
                             />
                         </label>
                     </div>
@@ -142,7 +162,7 @@ export default class Wiki extends React.Component {
                             <input
                                 type = "checkbox" defaultChecked = {false}
                                 value = "campus"
-                                onChange = {this.showFilteredWikis}
+                                onChange = {checkedBox}
                             /> 
                         </label>
                     </div>
@@ -152,7 +172,7 @@ export default class Wiki extends React.Component {
                             <input
                                 type = "checkbox" defaultChecked = {false}
                                 value = "calendar events"
-                                onChange = {this.showFilteredWikis}
+                                onChange = {checkedBox}
                             />
                         </label>
                     </div>
@@ -162,7 +182,7 @@ export default class Wiki extends React.Component {
                             <input
                                 type = "checkbox" defaultChecked = {false}
                                 value = "clubs"
-                                onChange = {this.showFilteredWikis}
+                                onChange = {checkedBox}
                             /> 
                         </label>
                     </div>
@@ -171,7 +191,7 @@ export default class Wiki extends React.Component {
                 </div>
 
                 <div className = "wiki-scroll">
-                    {this.displayWikiPost(this.state.posts)}
+                    {displayWikiPost(posts)}
                 </div>
 
             </div>  
@@ -187,5 +207,4 @@ export default class Wiki extends React.Component {
 
     }
 
-
-}
+export default Wiki;

@@ -11,7 +11,7 @@
 }
 .content {
     display: flex;
-    column-gap: 9%;
+    column-gap: 7.5%;
 }
 
 input{
@@ -36,7 +36,7 @@ input{
     background-color: #FFF9E3;
     height: 25rem;
     width: 17%;
-    margin-left: 3rem;
+    margin-left: 4rem;
     margin-top: 1rem;
     margin-bottom: 4rem;
     /* margin-right: 50px; */
@@ -80,13 +80,24 @@ p {
     width: 41vw;
     display: block;
     margin: 8px;
+    background-color: white;
+    transition: 0.3s;
 
     
 
 }
 
+
 .wiki-scroll {
     overflow-y: auto;
     max-height: 28.125rem;
 }
+
+.wiki-scroll :hover {
+
+    background-color: #FFF9E3;
+    
+}
+
+
 

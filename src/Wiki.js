@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import './Wiki.css';
 import axios from 'axios';
 import { useState } from "react";
+import { FlutterDash } from "@mui/icons-material";
 
 
 
@@ -25,9 +26,18 @@ function Wiki() {
        // getWikiPost();
    // };
 
-    const [checked, setChecked] = useState(false);
+    const [technical, setTechnical] = useState(false);
+    const [campus, setCampus] = useState(false);
+    const [calendarEvents, setCalendarEvents] = useState(false);
+    const [clubs, setClubs] = useState(false);
+
+    let checkBoxes = [technical, campus, calendarEvents, clubs];
+
+
+
     const [posts, setPosts] = useState([]);
     const [search, setSearch] = useState("");
+    
 
     
 
@@ -64,17 +74,60 @@ function Wiki() {
         ));
 
         }
+        let filteredResults = [];
+
+            checkBoxes.forEach((box, index) => {
+
+                console.log(box + " " + index) ;
+
+                if (box) {
+                    if (index === 0) {
+                       // console.log("technical");
+                        const technical = posts.filter(post => post.category.toLowerCase().includes("technical"));
+                        filteredResults.push(...technical);
+                    }
+                    if (index == 1) {
+                        const campus = posts.filter(post => post.category.toLowerCase().includes("campus"))
+                        filteredResults.push(...campus);
+                       //console.log("campus");
+                    }
+                    if (index == 2) {
+                        const calendar = posts.filter(post => post.category.toLowerCase().includes("calendar events"));
+                        filteredResults.push(...calendar);
+                        //console.log("calendar events");
+                    }
+                    else {
+                        const clubs = posts.filter(post => post.category.toLowerCase().includes("clubs"));
+                        filteredResults.push(...clubs);
+                       // console.log("clubs");
+                    }
+                }
+
+            });
+
+            if (filteredResults.length > 0) {
+
+                return filteredResults.map((query, index) => 
+                    
+                        <div key = {index} className = "wikipost-display">
+                            <h3>{query.title}</h3>
+                            <p>{query.description}</p>
+                        </div>
+                );
+
+            }
 
 
-        return posts.map((post, index) => (
 
-            <div key = {index} className = "wikipost-display">
-                <h3>{post.title}</h3>
-                <p>{post.description}</p>
-            </div>
+            return posts.map((post, index) => (
 
-    
-        ));
+                <div key = {index} className = "wikipost-display">
+                    <h3>{post.title}</h3>
+                    <p>{post.description}</p>
+                </div>
+
+        
+            ));
 
     };
 
@@ -87,46 +140,21 @@ function Wiki() {
 
     const checkedBox = (event) => {
 
-        setChecked(event.target.checked);
-        console.log(posts);
+
+        if (event.target.value == "technical") {
+            setTechnical(event.target.checked);
+        }
+        else if (event.target.value == "campus") {
+            setCampus(event.target.checked);
+        }
+        else if (event.target.value == "calendar events") {
+            setCalendarEvents(event.target.checked);
+        }
+        else {
+            setClubs(event.target.checked);
+        }
     }
 
-
-    /* 
-
-
-    const showFilteredWikis= (posts) => {
-
-        if (!posts.length) return null;
-    
-        if (this.state.filter != "") {
-            console.log("registered");
-            const filterResults = this.state.posts.filter(post => post.category.toLowerCase().includes(this.state.filter.toLowerCase()));
-            console.log(filterResults);
-            return filterResults.map((query, index) => (
-            
-                <div key = {index} className = "wikipost-display">
-                    <h3>{query.title}</h3>
-                    <p>{query.description}</p>
-                </div>
-        ));
-
-        }
-
-
-        return this.state.posts.map((post, index) => (
-
-            <div key = {index} className = "wikipost-display">
-                <h3>{post.title}</h3>
-                <p>{post.description}</p>
-            </div>
-
-    
-        ));
-
-    };
-
-    */
 
 
 
@@ -138,7 +166,6 @@ function Wiki() {
                 Contains locally sourced, organic wisdom. Shared by the student body, curated by USB
                 </center>
             </h3>
-
 
 
             <input type="text" onChange={searchSpace} />

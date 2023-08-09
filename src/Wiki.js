@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import './Wiki.css';
 import axios from 'axios';
 import { useState } from "react";
-import { FlutterDash } from "@mui/icons-material";
 
 
 
@@ -10,21 +9,6 @@ import { FlutterDash } from "@mui/icons-material";
 
 function Wiki() {
 
-
-    /*
-
-    const state = {
-        posts: [],
-        setPosts: [],
-        search: "",
-        filter: ""
-    }
-
-    */
-
-   //const componentDidMount = () => {
-       // getWikiPost();
-   // };
 
     const [technical, setTechnical] = useState(false);
     const [campus, setCampus] = useState(false);
@@ -63,64 +47,58 @@ function Wiki() {
 
         if (!posts.length) return null;
 
-        if (search != "") {
-            const searchResults = posts.filter(post => post.title.toLowerCase().includes(search.toLowerCase()));
-            return searchResults.map((query, index) => (
-            
-                <div key = {index} className = "wikipost-display">
-                    <h3>{query.title}</h3>
-                    <p>{query.description}</p>
-                </div>
-        ));
+        let searchResults = []
 
+        if (search != "") {
+            searchResults = posts.filter(post => post.title.toLowerCase().includes(search.toLowerCase()));
         }
+
+        let currentResults = posts;
+        if (searchResults.length > 0) {
+            currentResults = searchResults;
+        }
+        console.log(currentResults);
         let filteredResults = [];
+        let someBoxChecked = false;
 
             checkBoxes.forEach((box, index) => {
 
-                console.log(box + " " + index) ;
 
                 if (box) {
+                    someBoxChecked = true;
                     if (index === 0) {
-                       // console.log("technical");
-                        const technical = posts.filter(post => post.category.toLowerCase().includes("technical"));
+                        const technical = currentResults.filter(post => post.category.toLowerCase().includes("technical"));
                         filteredResults.push(...technical);
+                        console.log(filteredResults);
                     }
                     if (index == 1) {
-                        const campus = posts.filter(post => post.category.toLowerCase().includes("campus"))
+                        const campus = currentResults.filter(post => post.category.toLowerCase().includes("campus"))
                         filteredResults.push(...campus);
-                       //console.log("campus");
                     }
                     if (index == 2) {
-                        const calendar = posts.filter(post => post.category.toLowerCase().includes("calendar events"));
+                        const calendar = currentResults.filter(post => post.category.toLowerCase().includes("calendar events"));
                         filteredResults.push(...calendar);
-                        //console.log("calendar events");
                     }
                     else {
-                        const clubs = posts.filter(post => post.category.toLowerCase().includes("clubs"));
+                        const clubs = currentResults.filter(post => post.category.toLowerCase().includes("clubs"));
                         filteredResults.push(...clubs);
-                       // console.log("clubs");
                     }
                 }
 
             });
 
+
             if (filteredResults.length > 0) {
-
-                return filteredResults.map((query, index) => 
-                    
-                        <div key = {index} className = "wikipost-display">
-                            <h3>{query.title}</h3>
-                            <p>{query.description}</p>
-                        </div>
-                );
-
+                currentResults = filteredResults;
+            }
+            else {
+                if (someBoxChecked) {
+                    currentResults = []
+                }
             }
 
 
-
-            return posts.map((post, index) => (
-
+            return currentResults.map((post, index) => (
                 <div key = {index} className = "wikipost-display">
                     <h3>{post.title}</h3>
                     <p>{post.description}</p>

@@ -1,23 +1,110 @@
+
 .h1 {
     font-size: 30px;
     margin-bottom: 0;
 
 }
-
-.h2 {
+.h3 {
     font-size: 18px;
-    margin-bottom: 100px;
+    margin-bottom: 3rem;
+
 }
+.content {
+    display: flex;
+    column-gap: 7.5%;
+}
+
+.search {
+    margin: auto;
+    display: block;
+    margin-bottom: 2rem;
+    border-radius: 3rem;
+    width: 40%;
+    height: 2.5rem;
+    padding-left: 1.7rem;
+    background: transparent url("images/search-icon.svg") no-repeat 10px; 
+    background-size: 20px 20px;   
+    text-indent: 0.7rem;    
+    font-size: 18px;
+    border-color: gainsboro;
+    border-style: solid;
+    border-width: 1.5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px;
+}
+
+.category-filter {
+
+    background-color: #ffdf00;
+    height: 20rem;
+    width: 17%;
+    margin-left: 4rem;
+    margin-top: 3rem;
+    /* margin-bottom: 4rem;
+    /* margin-right: 50px; */
+    border-radius: 0.7rem;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 3px;
+    margin-right: 0rem;
+
+}
+
+.category {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: .625rem;
+    margin-top: 1.5rem;
+
+}
+
+label {
+
+    /*justify-content: inline-block; */
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    /* margin-top: 30px; */
+}
+
+p {
+
+    font-size: 1rem;
+    
+
+}
+
 
 .wikipost-display {
-    border: 1px solid black;
-    margin: 5px 375px;
-    border-radius: 5px;
+    display: block;
+    border: 1px solid gainsboro;
+    /* margin: 5px 375px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px;
+    border-radius: 10px;
     text-align: center;
+    width: 41vw;
+    display: block;
+    margin: 8px;
+    background-color: white;
+    transition: 0.3s;
+
+    
 
 }
+
 
 .wiki-scroll {
     overflow-y: auto;
-    max-height: 300px;
+    max-height: 28.125rem;
 }
+
+.wiki-scroll :hover {
+
+    background-color: #ffdf00;
+    cursor: pointer;
+
+    
+}
+
+
+

@@ -146,7 +146,7 @@ function Wiki() {
             </h3>
 
 
-            <input type="text" onChange={searchSpace} />
+            <input className = "search" type="text" onChange={searchSpace} />
 
             <div className = "content">
 

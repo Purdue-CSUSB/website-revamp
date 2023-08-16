@@ -14,34 +14,37 @@
     column-gap: 7.5%;
 }
 
-input{
+.search {
     margin: auto;
     display: block;
     margin-bottom: 2rem;
     border-radius: 3rem;
     width: 40%;
     height: 2.5rem;
-    padding-left: 2rem;
+    padding-left: 1.7rem;
     background: transparent url("images/search-icon.svg") no-repeat 10px; 
     background-size: 20px 20px;   
     text-indent: 0.7rem;    
     font-size: 18px;
-    border-color: gray;
+    border-color: gainsboro;
     border-style: solid;
     border-width: 1.5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px;
 }
 
 .category-filter {
 
-    background-color: #FFF9E3;
-    height: 25rem;
+    background-color: #ffdf00;
+    height: 20rem;
     width: 17%;
     margin-left: 4rem;
-    margin-top: 1rem;
-    margin-bottom: 4rem;
+    margin-top: 3rem;
+    /* margin-bottom: 4rem;
     /* margin-right: 50px; */
     border-radius: 0.7rem;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 3px;
+    margin-right: 0rem;
 
 }
 
@@ -50,31 +53,33 @@ input{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 10px;
-    font-size: 5px;
+    margin-left: .625rem;
+    margin-top: 1.5rem;
 
 }
 
 label {
 
-    width: 25%;
-    height: 25%;
-    justify-content: right;
+    /*justify-content: inline-block; */
+    display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-right: 2rem;
+    /* margin-top: 30px; */
 }
 
 p {
 
-    font-size: 14px;
+    font-size: 1rem;
+    
 
 }
 
 
 .wikipost-display {
     display: block;
-    border: 1px solid black;
+    border: 1px solid gainsboro;
     /* margin: 5px 375px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px;
     border-radius: 10px;
     text-align: center;
     width: 41vw;
@@ -95,7 +100,9 @@ p {
 
 .wiki-scroll :hover {
 
-    background-color: #FFF9E3;
+    background-color: #ffdf00;
+    cursor: pointer;
+
     
 }
 

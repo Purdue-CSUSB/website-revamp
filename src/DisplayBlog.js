@@ -26,7 +26,7 @@ function DisplayBlog() {
           axios.post("/get-blog", selectedBlog)
           .then(blogName => setBlogName(res.data))
         }  */
-        axios.get('http://localhost:5000/get-entries/')
+        axios.get('http://localhost:4000/get-entries/')
         .then(res => setBlog(res.data))
         .catch(err => console.error(err));   
         console.log(blogName) 

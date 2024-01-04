@@ -37,6 +37,19 @@ export default function Navbar() {
                 <li>
                     <Link to = "/ptp"> Purdue Technical Projects </Link>
                 </li>
+                <li>
+                    <Link to = "/internationalstudentresources"> International Student Resources </Link>
+                </li>
+                <li>
+                    <Link to = "/cs193"> CS 193 </Link>
+                </li>
+                <li>
+                    <Link to = "/studentforum-townhall"> Student Forum and Town Hall </Link>
+                </li>
+                <li>
+                    <Link to = "/mentorship-penpals"> Mentorship </Link>
+                </li>
+                
 
                    
                 </div>

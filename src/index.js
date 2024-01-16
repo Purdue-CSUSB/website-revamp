@@ -13,6 +13,12 @@ import DisplayBlog from "./DisplayBlog";
 import BlogPost from './BlogPost';
 import Wiki from './Wiki';
 import Initiatives from './Initiatives';
+import ClubHub from './ClubHub';
+import PTP from './PTP';
+import International from "./International"
+import CS193 from "./CS193"
+import TownHall from "./TownHall"
+import Mentorship from './Mentorship';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -38,6 +44,14 @@ root.render(
         <Route path = "/displayBlog" element = {<DisplayBlog/>} />
         <Route path = "/blogPost" element = {<BlogPost/>} />
         <Route path = "/initiatives" element = {<Initiatives/>} />
+        <Route path = "/clubhub" element =  {<ClubHub/>}/>
+        <Route path = "/ptp" element =  {<PTP/>}/>
+        <Route path = "/internationalstudentresources" element = {<International/>}/>
+        <Route path = "/CS193" element =  {<CS193/>}/>
+        <Route path = "/studentforum-townhall" element =  {<TownHall/>}/>
+        <Route path = "/mentorship" element =  {<Mentorship/>}/>
+
+
         </Routes>
       </BrowserRouter>
   </React.StrictMode>

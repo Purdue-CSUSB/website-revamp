@@ -17,20 +17,48 @@ export default function Navbar() {
         <div className="links">
         <Button className="hamburger">M</Button>
         <ul>
-            <li>
-            <Link to = "/"> Home </Link>
-            </li>
+
             <li>
             <Link to = "/addBlog"> Add Stuff </Link>
             </li>
             <li>
-            <Link to = "/displayBlog"> See Blogs </Link>
+            <Link to = "/displayBlog"> Humans of Purdue </Link>
             </li>
             <li>
             <Link to = "/wiki"> Student Wiki </Link>
             </li>
+
+            <div class="dropdown">
+                <button class="dropbtn"> Initiatives </button>
+                <div class="dropdown-content">
+                <li>
+                    <Link to = "/clubhub"> Club Hub </Link>
+                </li>
+                <li>
+                    <Link to = "/ptp"> Purdue Technical Projects </Link>
+                </li>
+                <li>
+                    <Link to = "/internationalstudentresources"> International Student Resources </Link>
+                </li>
+                <li>
+                    <Link to = "/cs193"> CS 193 </Link>
+                </li>
+                <li>
+                    <Link to = "/studentforum-townhall"> Student Forum and Town Hall </Link>
+                </li>
+                <li>
+                    <Link to = "/mentorship-penpals"> Mentorship </Link>
+                </li>
+                
+
+                   
+                </div>
+             </div>
             <li>
-            <Link to = "/initiatives"> Initiatives </Link>
+                <Link to = "/contact"> Contact Us </Link>
+            </li>
+            <li>
+                <Link to = "/about"> About </Link>
             </li>
         </ul>
         </div>

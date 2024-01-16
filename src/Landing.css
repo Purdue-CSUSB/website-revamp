@@ -1,4 +1,56 @@
-.Hello {
+.welcome {
     color: #ffc700;
     background-color: black;
+    display: flex;
+    padding: 1rem;
+
+
+    
 }
+
+h1 {
+    text-align: center;
+}
+
+p {
+
+    text-align: center;
+    padding: 2rem;
+    font-size: large;
+}
+
+img {
+
+    margin: 8px;
+    border-radius: 1rem;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.photo {
+
+    width: 50%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+
+
+    
+
+}
+
+.intro {
+
+    width: 50%;
+    height: 70%;
+    padding-top: 15%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+
+

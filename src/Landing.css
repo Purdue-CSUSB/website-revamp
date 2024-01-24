@@ -10,11 +10,26 @@
 
 h1 {
     text-align: center;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 625;
+    margin-bottom: -2rem;
+    
 }
 
+h2 {
+    text-align: center;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 250;
+    font-style: italic;
+    height:fit-content;
+    width:fit-content;
+
+
+}
 p {
 
-    text-align: center;
     padding: 2rem;
     font-size: large;
 }
@@ -27,28 +42,18 @@ img {
     max-height: 80%;
 }
 
-.photo {
-
-    width: 50%;
-    height: 70%;
-    justify-content: center;
-    align-items: center;
-
-
-    
-
-}
-
 .intro {
 
     width: 50%;
-    height: 70%;
-    padding-top: 15%;
-    align-items: center;
-    justify-content: center;
     display: flex;
-    font-size: larger;
-    font-weight: bolder;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3rem;
+    
+}
+
+.photo {
+    width: 50%;
 }
 
 

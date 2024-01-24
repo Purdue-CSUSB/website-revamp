@@ -1,5 +1,5 @@
 // General Imports
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as React from 'react';
 import './Landing.css';
 
@@ -10,6 +10,19 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Menu } from "@mui/base";
+
+const theme = createTheme({
+  palette: {
+    yellow: {
+      main: '#ffc700'
+    },
+  },
+});
 
 // Defined constants
 const Item = styled(Paper)(({ theme }) => ({
@@ -20,7 +33,15 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 
+
+
 export default function Landing() {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/wiki');
+      };
   return (
     // Container for Hello from USB
     // FIXME: Convert this to a box potentially, add padding.
@@ -59,7 +80,19 @@ export default function Landing() {
 
     <div className = "welcome">
         <div className = "intro">
-            Hello from USB
+            <h1>Hello from USB! </h1>
+            <h2> Strengthening the Purdue Computing Student Experience since 1999 </h2>
+            <ThemeProvider theme={theme}>
+                <Stack direction="row" spacing={2} justifyContent = "center" marginTop={-6}>
+                    <Button color = "yellow" size = "large" variant="outlined" startIcon={<MenuBookIcon />} 
+                    onClick={handleClick}>
+                        Read Student Wiki
+                    </Button>
+                    <Button color = "yellow" size = "large" variant="outlined" startIcon={<TipsAndUpdatesIcon />}>
+                        Explore Initiatives
+                    </Button>
+                </Stack>
+            </ThemeProvider>
         </div>
         <div className = "photo">
 

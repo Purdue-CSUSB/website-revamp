@@ -32,6 +32,9 @@ export default function Navbar() {
                 <button class="dropbtn"> Initiatives </button>
                 <div class="dropdown-content">
                 <li>
+                    <Link to = "/Initiatives"> All Initiatives </Link>
+                </li>
+                <li>
                     <Link to = "/clubhub"> Club Hub </Link>
                 </li>
                 <li>
@@ -49,7 +52,9 @@ export default function Navbar() {
                 <li>
                     <Link to = "/mentorship-penpals"> Mentorship </Link>
                 </li>
-                
+                <li>
+                    <Link to = "/helproom"> Help Room </Link>
+                </li>
 
                    
                 </div>

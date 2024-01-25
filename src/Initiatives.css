@@ -2,3 +2,36 @@
     color: #ffc700;
     background-color: black;
 }
+
+.h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.p {
+    margin: 0px;
+}
+
+.content {
+    display: flex;
+    column-gap: 7.5%;
+}
+
+.initiative {
+    display: block;
+    border: 1px solid gainsboro;
+    /* margin: 5px 375px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px;
+    border-radius: 10px;
+    text-align: center;
+    width: 41vw;
+    display: block;
+    margin: 8px;
+    background-color: white;
+    transition: 0.3s;
+}

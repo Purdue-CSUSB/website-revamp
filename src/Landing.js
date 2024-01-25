@@ -24,23 +24,22 @@ export default function Landing() {
   return (
     // Container for Hello from USB
     // FIXME: Convert this to a box potentially, add padding.
+    /* 
     <Container class="Hello" maxWidth="sm">
         <Grid container spacing={2}>
-            <Grid item xs={6}>
-                <img src = {require('./images/team2022.png')}/> 
-            </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={5}>
                 <h1>Hello from USB</h1>
-                <p>The Computer Science Undergraduate Board is dedicated to improving the student experience within Computer and Data Sciences at Purdue- whether by managing CS193, hosting forums for student advocacy, or maintaining a database of undergrad-tailored resources, USB is continually creating initiatives that will uphold our values.</p>
+                <p>The Computer Science Undergraduate Board is dedicated to improving the student experience 
+                    within Computer and Data Sciences at Purdue - whether by managing CS193, hosting forums for student advocacy, 
+                    or maintaining a database of undergrad-tailored resources, USB is continually creating initiatives 
+                    that will uphold our values.</p>
                 <Grid container spacing={2}>
                     <Grid item xs={6}>
-                        <Item>xs=6</Item>
                         <Link to = "/initiatives">
                             <Button hover variant="contained">Our Initiatives</Button>
                         </Link>
                     </Grid>
                     <Grid item xs={6}>
-                        <Item>xs=6</Item>
                         <Link to = "/wiki">
                             <Button hover variant="contained">Read Student Wiki</Button>
                         </Link>
@@ -48,8 +47,30 @@ export default function Landing() {
                 </Grid>
 
             </Grid>
+            <Grid item xs={6}>
+                <img src = {require('./images/team2022.png')}/> 
+             </Grid>
         </Grid>
+
+    
     </Container>
+
+    */
+
+    <div className = "welcome">
+        <div className = "intro">
+            Hello from USB
+        </div>
+        <div className = "photo">
+
+            <img src = {require('./images/team2022.png')}/> 
+
+        </div>
+
+
+    </div>
+
+
     // TODO: Container for Stay Connected
     // TODO: Container for Meet the Board
     // TODO: Container for About Us

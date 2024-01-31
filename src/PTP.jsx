@@ -7,6 +7,8 @@ import React from 'react';
 import logo from '../images/logo.png'
 import hobbybook from '../images/hobbies/hobbies-books-2.jpeg'
 
+import './PTP.css';
+
 const PTP = () => {
     //const navigate = useNavigate(); 
       return (

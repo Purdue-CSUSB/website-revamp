@@ -1,0 +1,80 @@
+import React from 'react';
+import './PTPProjectTemplate.css';
+import dev1 from '../src/images/dev-1.png';
+import dev2 from '../src/images/dev-2.png';
+import dev3 from '../src/images/dev-3.png';
+
+const PTPProjectTemplate = () => {
+  return (
+    <div className="container">
+      <div className="left-section">
+        <h1>ALL ABOUT THE PROJECT</h1>
+
+        <div className="video-container">
+          {/* Add your embedded video code here */}
+          <iframe width="660" height="335" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <h2 className='what-header'>WHAT IS IT?</h2>
+       
+        <p className='what-desc'>"
+        <span style={{ fontWeight: 'bold' }}>Some sort of main idea or header</span> <br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+
+      </div>
+
+      <div className="right-section">
+        <h1>ALL ABOUT THE DEVELOPER(S)</h1>
+
+        <div className="developer-images">
+          {/* Image 1 */}
+          <div className="developer-image">
+            <img src={dev1} alt="Developer 1" />
+            <div className="caption1">Isabel Wright</div>
+            <div className="caption2">CS '24</div>
+          </div>
+
+          {/* Image 2 */}
+          <div className="developer-image">
+            <img src={dev2} alt="Developer 2" />
+            <div className="caption1">James Green</div>
+            <div className="caption2">DS 23'</div>
+          </div>
+          
+          {/* Image 3 */}
+          <div className="developer-image">
+            <img src={dev3} alt="Developer 3" />
+            <div className="caption1">Sam Brown</div>
+            <div className="caption2">AI '22</div>
+          </div>
+        </div>
+
+        <h2>CREATIVE PROCESS</h2>
+       
+        <p className='creative-process-desc'>
+        <span style={{ fontWeight: 'bold' }}>Some sort of main idea or header</span> <br/>
+        Description of the creative process goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+
+        <h2>ADDITIONAL INFORMATION</h2>
+        
+        <p className='add-info-desc'>
+        <span style={{ fontWeight: 'bold' }}>Some sort of main idea or header</span> <br/>
+        Description of the creative process goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default PTPProjectTemplate;

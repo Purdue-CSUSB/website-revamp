@@ -14,7 +14,7 @@ import BlogPost from './BlogPost';
 import Wiki from './Wiki';
 import Initiatives from './Initiatives';
 import ClubHub from './ClubHub';
-import PTP from './PTP';
+import PTP from './PTP.jsx';
 import International from "./International"
 import CS193 from "./CS193"
 import TownHall from "./TownHall"

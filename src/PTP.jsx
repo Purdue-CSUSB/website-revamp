@@ -4,8 +4,8 @@ import React from 'react';
 
 //import { useNavigate } from 'react-router-dom';
 // standard
-import logo from '../images/logo.png'
-import hobbybook from '../images/hobbies/hobbies-books-2.jpeg'
+import logo from "../src/images/logo.png"
+import hobbybook from "../src/images/hobbies-books-2.jpeg"
 
 import './PTP.css';
 
@@ -14,7 +14,7 @@ const PTP = () => {
       return (
         <div>
 
-        <div className="temp-nav">
+        {/* <div className="temp-nav">
           <div className="logo-container">
             <img src={logo} alt="Logo" className="logo" />
           </div>
@@ -25,7 +25,7 @@ const PTP = () => {
             <div className="menu-item">Blog</div>
             <div className="menu-item">Contact Us</div>
           </div>
-        </div>
+        </div> */}
 
           <div className='ptp-lp-headers'>
             <div className='ptp-lp-headers--main'>PURDUE TECHNICAL PROJECTS</div>
@@ -65,7 +65,7 @@ const PTP = () => {
             {/* search */}
             <div className="search-bar">
               <input type="text" placeholder="Search..." />
-              <button type="button">Search</button>
+              <button type="button" className='button-50-search'>Search</button>
             </div>
 
           </div>
@@ -82,10 +82,10 @@ const PTP = () => {
                 <img src = {hobbybook} alt="Card Image" className="card-image" />
                 {/* Text on the right */}
                 <div className="card-text">
-                <h2 className='card-text-header'>Project 1</h2>
-                <p className='card-text-sub-header'>Here's a brief description of Project 1.</p>
-                <p className='card-text-desc'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam."</p>
+                  <h2 className='card-text-header'>Project 1</h2>
+                  <p className='card-text-sub-header'>Here's a brief description of Project 1.</p>
+                  <p className='card-text-desc'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam."</p>
                 </div>
               </div>
 

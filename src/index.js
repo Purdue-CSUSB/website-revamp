@@ -19,6 +19,7 @@ import International from "./International"
 import CS193 from "./CS193"
 import TownHall from "./TownHall"
 import Mentorship from './Mentorship';
+import Contact from './Contact';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -50,6 +51,8 @@ root.render(
         <Route path = "/CS193" element =  {<CS193/>}/>
         <Route path = "/studentforum-townhall" element =  {<TownHall/>}/>
         <Route path = "/mentorship" element =  {<Mentorship/>}/>
+        <Route path = "/contact" element =  {<Contact/>}/>
+
 
 
         </Routes>

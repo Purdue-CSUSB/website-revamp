@@ -1,0 +1,11 @@
+.header {
+    color: #333;
+    text-align: left;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    font-family: Tahoma;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 106%; /* 90.1px */
+    font-variant: small-caps;
+}

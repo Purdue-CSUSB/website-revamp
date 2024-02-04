@@ -1,47 +1,51 @@
 // ptp-landing
-import React from 'react';
-// import Navbar from './Navbar';
-
+// import React from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
-// standard
+import React, { useState } from 'react';  // Import useState
 import logo from "../src/images/logo.png"
 import hobbybook from "../src/images/hobbies-books-2.jpeg"
-
 import './PTP.css';
+// import ProjectTemplateOverlay from './ProjectTemplateOverlay.jsx';
+import PTPProjectTemplate from './PTPProjectTemplate.jsx';
+
 
 const PTP = () => {
       const navigate = useNavigate(); 
 
-      const handleCardClick = () => {
-        console.log("Card clicked!");
-        navigate('/ptp-project-template');
+      const [isProjectTemplateOpen, setIsProjectTemplateOpen] = useState(false);
+
+
+      const openProjectTemplateModal = () => {
+        console.log("user clicked on card");
+        setIsProjectTemplateOpen(true);
+        // // navigate('/ptp-project-template'); // Navigate to the modal
+        // <ProjectTemplateOverlay /> // I think this isn't rendering because it has to be in return() statement
+        // console.log("after <ProjectTemplateOverlay /> statement:");
       };
+
+      
+      const closeProjectTemplateModal = () => {
+        console.log("user clicked on card");
+        setIsProjectTemplateOpen(false);
+        // // navigate('/ptp-project-template'); // Navigate to the modal
+        // <ProjectTemplateOverlay /> // I think this isn't rendering because it has to be in return() statement
+        // console.log("after <ProjectTemplateOverlay /> statement:");
+      };
+
+      // const handleCardClick = () => {
+      //   console.log("Card clicked!");
+      //   navigate('/ptp-project-template');
+      // };
       return (
         <div>
-
-        {/* <div className="temp-nav">
-          <div className="logo-container">
-            <img src={logo} alt="Logo" className="logo" />
-          </div>
-          <div className="menu-items">
-            <div className="menu-item">About Us</div>
-            <div className="menu-item">Initiatives</div>
-            <div className="menu-item">Student Wiki</div>
-            <div className="menu-item">Blog</div>
-            <div className="menu-item">Contact Us</div>
-          </div>
-        </div> */}
-
           <div className='ptp-lp-headers'>
             <div className='ptp-lp-headers--main'>PURDUE TECHNICAL PROJECTS</div>
             <div className='ptp-lp-headers--motto'>Student-Created <span style={{ color: 'gold', fontSize: '12px', border: '5px' }}>&#9733;</span> Purdue-Related</div>
             
             <div className='ptp-lp-headers--desc'>We created this page to market student-created, Purdue-related projects! Our goals with PTP is to <b>promote students’ creativity </b>and <b>connect the student body with useful projects!</b></div>
           </div>
-
           {/* <button className='ptp-lp-submit-project-button'>Submit a project!</button> */}
           <button className='button-50'>SUBMIT A <br/> PROJECT!</button>
-
 
           <div className='search-and-filter'>
             
@@ -75,14 +79,12 @@ const PTP = () => {
 
           </div>
 
-          
-
-
           <div className='cards'>
 
             <div className='row'>
 
-              <div className="card" onClick={() => navigate('/ptp-project-template')}>
+              {/* <div className="card" onClick={() => navigate('/ptp-project-template')}> */}
+              <div className="card" onClick={openProjectTemplateModal}>
                 {/* Image on the left */}
                 <img src = {hobbybook} alt="Card Image" className="card-image" />
                 {/* Text on the right */}
@@ -173,6 +175,13 @@ const PTP = () => {
               
             </p>
           </div> */}
+           {/* Render the modal component */}
+          {/* <ProjectTemplateOverlay /> */}
+          {/* Conditionally render the modal overlay */}
+          {isProjectTemplateOpen && (
+            // <ProjectTemplateOverlay onClose={closeProjectTemplateModal} />
+            <PTPProjectTemplate onClose={closeProjectTemplateModal} />
+          )}
         </div>
         
       );

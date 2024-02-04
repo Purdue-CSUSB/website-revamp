@@ -2,7 +2,7 @@
 import React from 'react';
 // import Navbar from './Navbar';
 
-//import { useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 // standard
 import logo from "../src/images/logo.png"
 import hobbybook from "../src/images/hobbies-books-2.jpeg"
@@ -10,7 +10,12 @@ import hobbybook from "../src/images/hobbies-books-2.jpeg"
 import './PTP.css';
 
 const PTP = () => {
-    //const navigate = useNavigate(); 
+      const navigate = useNavigate(); 
+
+      const handleCardClick = () => {
+        console.log("Card clicked!");
+        navigate('/ptp-project-template');
+      };
       return (
         <div>
 
@@ -77,11 +82,11 @@ const PTP = () => {
 
             <div className='row'>
 
-              <div className="card">
+              <div className="card" onClick={() => navigate('/ptp-project-template')}>
                 {/* Image on the left */}
                 <img src = {hobbybook} alt="Card Image" className="card-image" />
                 {/* Text on the right */}
-                <div className="card-text">
+                <div className="card-text" >
                   <h2 className='card-text-header'>Project 1</h2>
                   <p className='card-text-sub-header'>Here's a brief description of Project 1.</p>
                   <p className='card-text-desc'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

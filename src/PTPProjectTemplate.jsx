@@ -29,11 +29,11 @@ const PTPProjectTemplate = () => {
         <h1>ALL ABOUT THE DEVELOPER(S)</h1>
 
         <div className="developer-images">
-          {/* Image 1 */}
+          {/* Image 2 */}
           <div className="developer-image">
-            <img src={dev1} alt="Developer 1" />
-            <div className="caption1">Isabel Wright</div>
-            <div className="caption2">CS '24</div>
+            <img src={dev1} alt="Developer 2" />
+            <div className="caption1">James Green</div>
+            <div className="caption2">DS 23'</div>
           </div>
 
           {/* Image 2 */}

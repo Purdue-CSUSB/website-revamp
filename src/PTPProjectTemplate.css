@@ -37,16 +37,18 @@ body {
     /* justify-content: space-between; */
     /* letter-spacing: 7px; */
     margin-top: 20px;
-    margin-left: 26%;
+    margin-left: -3%;
     /* margin-right: -420%; */
   }
   
   .developer-image {
     text-align: center;
+    margin-left: 10%;
+
   }
   
   .developer-image img {
-    width: 100px; /* Adjust as needed */
+    width: 190px; /* Adjust as needed */
     border-radius: 50%;
     margin-bottom: 10px;
   }

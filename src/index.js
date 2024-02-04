@@ -14,8 +14,8 @@ import BlogPost from './BlogPost';
 import Wiki from './Wiki';
 import Initiatives from './Initiatives';
 import ClubHub from './ClubHub';
-import PTP from './PTPProjectTemplate.jsx';
-// import PTP from './PTP.jsx';
+import PTPProjectTemplate from './PTPProjectTemplate.jsx';
+import PTP from './PTP.jsx';
 import International from "./International"
 import CS193 from "./CS193"
 import TownHall from "./TownHall"
@@ -51,7 +51,7 @@ root.render(
         <Route path = "/CS193" element =  {<CS193/>}/>
         <Route path = "/studentforum-townhall" element =  {<TownHall/>}/>
         <Route path = "/mentorship" element =  {<Mentorship/>}/>
-
+        <Route path = "/ptp-project-template" element =  {<PTPProjectTemplate/>}/>
 
         </Routes>
       </BrowserRouter>

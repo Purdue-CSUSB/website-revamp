@@ -18,9 +18,6 @@ const PTP = () => {
       const openProjectTemplateModal = () => {
         console.log("user clicked on card");
         setIsProjectTemplateOpen(true);
-        // // navigate('/ptp-project-template'); // Navigate to the modal
-        // <ProjectTemplateOverlay /> // I think this isn't rendering because it has to be in return() statement
-        // console.log("after <ProjectTemplateOverlay /> statement:");
       };
 
       

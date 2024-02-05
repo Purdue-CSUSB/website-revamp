@@ -126,9 +126,23 @@ body {
   right: 10px;
   cursor: pointer;
   color: #fff;
-  background: gold;
+  /* background: gold; */
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 0px;
+  /* width: 5%;
+  
+  height: 1%; */
+  max-width: 30px; /* Set the maximum width */
+  max-height: 30px;
+  /* max-height: 20px; Set the maximum height */
+  /* margin-left: 37%; */
+  margin-right: 1.5%;
+  margin-top: 1%;
+  
+}
+
+img:hover {
+  transform: scale(1.2);
 }
 
 /* ... Other styles ... */

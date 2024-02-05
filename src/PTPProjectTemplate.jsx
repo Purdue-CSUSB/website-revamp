@@ -5,6 +5,7 @@ import './PTPProjectTemplate.css';
 import dev1 from '../src/images/dev-1.png';
 import dev2 from '../src/images/dev-2.png';
 import dev3 from '../src/images/dev-3.png';
+import expandbtn from '../src/images/expand.png'
 
 const PTPProjectTemplate = ( {onClose} ) => {
 
@@ -22,29 +23,21 @@ const PTPProjectTemplate = ( {onClose} ) => {
     //   <div className="modal-content" onClick={(e) => e.stopPropagation()}>
     <div className={`modal-overlay ${isExpanded ? 'expanded' : ''}`} onClick={closeModal}>
       <div className={`modal-content ${isExpanded ? 'expanded-content' : ''}`} onClick={(e) => e.stopPropagation()}>
-        {/* Your PTP project template content goes here */}
-        {/* <div className="expand-button" onClick={toggleExpand}>
-          {isExpanded ? 'Minimize' : 'Expand'}
-        </div> */}
+
         <div className='overlay-headers'>
           <h1 className='overlay-project-name'>NAME OF PROJECT</h1>
-          <button className="expand-button" onClick={toggleExpand}>
+          {/* <button className="expand-button" onClick={toggleExpand}>
             {isExpanded ? 'Minimize' : 'Expand'}
-          </button>
+          </button> */}
+          <img
+            src={expandbtn}
+            alt={isExpanded ? 'Minimize' : 'Expand'}
+            className="expand-button"
+            onClick={toggleExpand}
+          />
         </div>
-       
-        {/* <div className="expand-button" onClick={toggleExpand}>
-          {isExpanded ? 'Minimize' : 'Expand'}
-        </div> */}
-        {/* <button className="expand-button" onClick={toggleExpand}>
-          {isExpanded ? 'Minimize' : 'Expand'}
-        </button> */}
-        {/* Add your project template content here */}
         
         <div className="container">
-        {/* <button className="expand-button" onClick={toggleExpand}>
-          {isExpanded ? 'Minimize' : 'Expand'}
-        </button> */}
           <div className="left-section">
         <h1>ALL ABOUT THE PROJECT</h1>
 
@@ -64,9 +57,6 @@ const PTPProjectTemplate = ( {onClose} ) => {
           </div>
 
           <div className="right-section">
-            {/* <button className="expand-button" onClick={toggleExpand}>
-            {isExpanded ? 'Minimize' : 'Expand'}
-            </button> */}
             <h1>ALL ABOUT THE DEVELOPER(S)</h1>
 
             <div className="developer-images">

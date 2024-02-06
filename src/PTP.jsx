@@ -24,9 +24,11 @@ const PTP = () => {
       const closeProjectTemplateModal = () => {
         console.log("user clicked on card");
         setIsProjectTemplateOpen(false);
-        // // navigate('/ptp-project-template'); // Navigate to the modal
-        // <ProjectTemplateOverlay /> // I think this isn't rendering because it has to be in return() statement
-        // console.log("after <ProjectTemplateOverlay /> statement:");
+      };
+
+
+      const openLinkInNewTab = () => {
+        window.open('https://forms.gle/i79juP31R87Jt6wh7', '_blank');
       };
 
       // const handleCardClick = () => {
@@ -41,8 +43,9 @@ const PTP = () => {
             
             <div className='ptp-lp-headers--desc'>We created this page to market student-created, Purdue-related projects! Our goals with PTP is to <b>promote students’ creativity </b>and <b>connect the student body with useful projects!</b></div>
           </div>
-          {/* <button className='ptp-lp-submit-project-button'>Submit a project!</button> */}
-          <button className='button-50'>SUBMIT A <br/> PROJECT!</button>
+          <button className='button-50'onClick={openLinkInNewTab}>SUBMIT A <br/> PROJECT!</button>
+          {/* <button className='button-50' onclick>SUBMIT A <br/> PROJECT!</button> */}
+          {/* <a href="https://forms.gle/i79juP31R87Jt6wh7"> <button className='button-50'> SUBMIT A <br/> PROJECT!</button> </a>; */}
 
           <div className='search-and-filter'>
             

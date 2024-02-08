@@ -26,6 +26,9 @@ import CardMedia from "@mui/material/CardMedia";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import IconButton from '@mui/material/IconButton';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
+import PieChartSharpIcon from '@mui/icons-material/PieChartSharp';
+import VolunteerActivismOutlinedIcon from '@mui/icons-material/VolunteerActivismOutlined';
+import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
 
 
 
@@ -165,10 +168,70 @@ export default function Landing() {
 
             </div>
 
+            <div className = "about">
+                <div className = "yellow-square" >
+                    <h2 style = {{fontWeight: 400, marginTop: '100px'}}> Our Mission</h2>
+                    <h3 style = {{marginTop: '-100px'}}> The Computer Science Undergraduate Student Board has been working since 1999 
+                        to improve the experience of undergraduates in the Computer Science Department at Purdue. 
+                        We use our relationship with faculty, the Computer Science Corporate Partners Program, and 
+                        administration to provide resources and promote community amongst CS/DS/AI undergraduates.</h3>
+                    
+
+                </div>
+                <div className = "yellow-triangle">
+                </div>
+
+                <div className = "goals">
+                        <h1 style = {{marginLeft: '-800px',}}> About Us</h1>
+                        <div className = "objective">
+                        <PieChartSharpIcon style ={{fontSize: "large"}}/>
+                        <h3 style = {{
+                            marginTop: '75px',
+                            padding: '16px', 
+                            fontSize: '18px', 
+                            textAlign: "right"
+                            }}> We want to support students both during and after 
+                            their undergraduate experience, so we lead the freshman required course CS 193, provide corporate networking events for all students, 
+                            and manage the Help Room and Tutor List for extra academic support.</h3>
+
+                        </div>
+                        <div className = "objective">
+                        <VolunteerActivismOutlinedIcon />
+                        <h3 style = {{
+                            marginTop: '75px',
+                            padding: '16px', 
+                            fontSize: '18px', 
+                            textAlign: "right"
+                            }}> We care about building an inclusive and engaging community, so we offer ways to connect with other 
+                            students and organizations through PenPals and Club Hub. We also give students a platform to 
+                            connect with the department through Student Forum and Town Hall, and encourage their creativity 
+                            through Purdue Technical Projects.</h3>
+
+                        </div>
+                        <div className = "objective">
+                        <Diversity3OutlinedIcon />
+                        <h3 style = {{
+                            marginTop: '75px',
+                            padding: '16px', 
+                            fontSize: '18px', 
+                            textAlign: "right"
+                            }}>We maintain many sources of advice, including the Student Wiki and Blog, 
+                            both found on our website. We also connect upperclassmen to freshmen through 
+                            our Mentorship initiative.</h3>
+                        </div>
+                        
+                        
+                </div>
+
+
+
+            </div>
+
             
         </div>
 
         // TODO: Container for Meet the Board
         // TODO: Container for About Us
+
     );
 }

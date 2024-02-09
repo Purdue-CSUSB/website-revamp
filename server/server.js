@@ -18,6 +18,6 @@ mongoose.connect(process.env.CONNECTION
 ).then(console.log("Connection successful"))
 .catch((err) => console.log(err))
 
-app.listen(5000, () => {
-  console.log("Server is running at port 5000");
+app.listen(4000, () => {
+  console.log("Server is running at port 4000");
 });

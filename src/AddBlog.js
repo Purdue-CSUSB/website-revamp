@@ -36,7 +36,7 @@ function AddBlog() {
   const [description, setDescription] = useState("")
 
   useEffect(() => {
-    axios.get('http://localhost:5000/members/')
+    axios.get('http://localhost:4000/members/')
     .then(res => {
       // console.log(res.data)
       setMembers(res.data)
@@ -63,7 +63,7 @@ function AddBlog() {
     formData.append('format', format)
    // formData.append('content', content)
 
-    axios.post('http://localhost:5000/add-entry/', formData)
+    axios.post('http://localhost:4000/add-entry/', formData)
       .then((res) => (alert(res.data)))
       .catch((err) => (alert(err)));
     setTitle("");
@@ -83,7 +83,7 @@ function AddBlog() {
     formData.append('standing', standing.value)
     formData.append('linkedIn', linkedIn)
 
-    axios.post("http://localhost:5000/add-member/", formData)
+    axios.post("http://localhost:4000/add-member/", formData)
       .then((res) => (alert(res.data)))
       .catch((err) => alert(err));
   }
@@ -100,7 +100,7 @@ function AddBlog() {
 
     console.log(formData)
 
-    axios.post("http://localhost:5000/add-initiative/", {name: initiativeName,
+    axios.post("http://localhost:4000/add-initiative/", {name: initiativeName,
       description: description, members: memberTemp, link: link, linkDescription: linkDescription})
       .then((res) => (alert(res.data)))
       .catch((err) => alert(err));

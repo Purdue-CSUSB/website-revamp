@@ -18,6 +18,11 @@ const PTPProjectTemplate = ( {onClose} ) => {
   const closeModal = () => {
     onClose(); // Close the modal
   };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/sarah-pushparaj/', '_blank');
+  };
+
   return (
     // <div className="modal-overlay" onClick={closeModal}>
     //   <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -62,21 +67,21 @@ const PTPProjectTemplate = ( {onClose} ) => {
             <div className="developer-images">
               {/* Image 2 */}
               <div className="developer-image">
-                <img src={dev1} alt="Developer 2" />
+                <img src={dev1} alt="Developer 2" onClick = {openLinkedIn} />
                 <div className="caption1">James Green</div>
                 <div className="caption2">DS 23'</div>
               </div>
 
               {/* Image 2 */}
               <div className="developer-image">
-                <img src={dev2} alt="Developer 2" />
+                <img src={dev2} alt="Developer 2" onClick = {openLinkedIn}/>
                 <div className="caption1">James Green</div>
                 <div className="caption2">DS 23'</div>
               </div>
               
               {/* Image 3 */}
               <div className="developer-image">
-                <img src={dev3} alt="Developer 3" />
+                <img src={dev3} alt="Developer 3" onClick = {openLinkedIn}/>
                 <div className="caption1">Sam Brown</div>
                 <div className="caption2">AI '22</div>
               </div>

@@ -9,6 +9,21 @@ import './PTP.css';
 import PTPProjectTemplate from './PTPProjectTemplate.jsx';
 
 
+/* TODOS
+ * add tags to each project card
+  * some sort of icon and tag text
+    * academic: U+1F3EB 🏫🎒
+    * social: &#129489 🧑🏻‍🤝‍🧑🏿
+    * recreational: 1F3C0 🏀
+    * dining: 1F354 🍔
+  * relevant color border?
+ * add tag filter functionality
+ * add search functionality
+ * 
+
+*/
+
+
 const PTP = () => {
       const navigate = useNavigate(); 
 
@@ -54,17 +69,17 @@ const PTP = () => {
 
             <div className="filter-container">
               <div className="filter-heading">Filter by tags:</div>
-              <div className="checkboxes">
-                <label>
+              <div className="checkboxes">           
+                <label style={{ color: 'purple' }}>
                   <input type="checkbox" value="academic" /> Academic
                 </label>
-                <label>
+                <label style={{ color: 'green' }}>
                   <input type="checkbox" value="social" /> Social
                 </label>
-                <label>
+                <label style={{ color: 'blue' }}>
                   <input type="checkbox" value="recreational" /> Recreational
                 </label>
-                <label>
+                <label style={{ color: 'brown' }}>
                   <input type="checkbox" value="dining" /> Dining
                 </label>
               </div>
@@ -93,7 +108,11 @@ const PTP = () => {
                   <p className='card-text-sub-header'>Here's a brief description of Project 1.</p>
                   <p className='card-text-desc'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam."</p>
+                  <p className='card-tag-recreational' span style={{ color: 'blue', fontSize: '15px', border: '5px' }}>🏀 Recreational </p>
                 </div>
+                {/* <div className='card-tag'>
+                  <span style={{ color: 'gold', fontSize: '12px', border: '5px' }}>&#9733;</span>
+                </div> */}
               </div>
 
               <div className="card">
@@ -105,6 +124,7 @@ const PTP = () => {
                 <p className='card-text-sub-header'>Here's a brief description of Project 1.</p>
                 <p className='card-text-desc'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                   Ut enim ad minim veniam."</p>
+                  <p className='card-tag-social' span style={{ color: 'green', fontSize: '15px', border: '5px' }}>🧑🏻‍🤝‍🧑🏿 Social </p>
                 </div>
               </div>
 
@@ -121,6 +141,7 @@ const PTP = () => {
                 <p className='card-text-sub-header'>Here's a brief description of Project 1.</p>
                 <p className='card-text-desc'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                   Ut enim ad minim veniam."</p>
+                  <p className='card-tag-academic' span style={{ color: 'purple', fontSize: '15px', border: '5px' }}>🏫 Academic </p>
                 </div>
               </div>
 
@@ -133,7 +154,9 @@ const PTP = () => {
                 <p className='card-text-sub-header'>Here's a brief description of Project 1.</p>
                 <p className='card-text-desc'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                   Ut enim ad minim veniam."</p>
+                  <p className='card-tag-dining' span style={{ color: 'brown', fontSize: '15px', border: '5px' }}>🍔 Dining </p>
                 </div>
+                
               </div>
 
             </div>

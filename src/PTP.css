@@ -48,14 +48,14 @@
   font-size: 30px;
   font-weight: bolder;
   margin-bottom: 15px;
-  margin-left: 40%;
+  margin-left: 39%;
 }
 
 .ptp-lp-headers--motto {
   font-size: 17px;
   font-weight: bold;
   margin-bottom: 5px;
-  margin-left: 42.5%;
+  margin-left: 41.5%;
 
 }
 
@@ -372,15 +372,6 @@
   
 }
 
-
-
-
-
-
-
-
-
-
 /* Card.css */
 
 .cards {
@@ -445,6 +436,42 @@
   margin-left: -10%;
   text-align: left;
   width: 95%;
+}
+
+.card-tag-academic {
+  margin-top: 5%;
+  margin-left: -60%;
+  font-family:'Courier New', Courier, monospace;
+  letter-spacing: 0px;
+  font-weight: bold;
+  /* font-size: 100px; */
+}
+
+.card-tag-social {
+  margin-top: 5%;
+  margin-left: -67%;
+  font-family:'Courier New', Courier, monospace;
+  letter-spacing: 0px;
+  font-weight: bold;
+  /* font-size: 100px; */
+}
+
+.card-tag-recreational {
+  margin-top: 5%;
+  margin-left: -47%;
+  font-family:'Courier New', Courier, monospace;
+  letter-spacing: 0px;
+  font-weight: bold;
+  /* font-size: 100px; */
+}
+
+.card-tag-dining {
+  margin-top: 5%;
+  margin-left: -66%;
+  font-family:'Courier New', Courier, monospace;
+  letter-spacing: 0px;
+  font-weight: bold;
+  /* font-size: 100px; */
 }
 
 .card::before {

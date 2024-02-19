@@ -108,6 +108,26 @@ app.post("/add-initiative", async(req, res) => {
          res.status(404).send(err.message);
       }
 })
+
+app.post("/add_wiki", async(req, res) => {
+   await client.connect();
+   try {
+      let WikiPost = {
+         title: req.body.title,
+         author: req.body.author,
+         date: req.body.date,
+         description: req.body.description,
+         content: req.body.description,
+         category: req.body.category
+
+      }
+      const bl = client.db("Blogs").collection("wikiposts").insertOne(WikiPost);
+      res.status(200).send("success");
+   }
+   catch (err) {
+         res.status(404).send(err.message);
+      }
+})
 app.post("/add-member", upload.single("file"), async(req,res) => {
    const params = {
       Bucket:process.env.AWS_BUCKET_NAME,

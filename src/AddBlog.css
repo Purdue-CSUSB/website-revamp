@@ -1,5 +1,5 @@
 .AddBlog {
-    text-align: center;
+    text-align: left;
   }
   
   .body {
@@ -11,10 +11,7 @@
   .column1 {
     margin-right: 10rem;
     width: 20rem;
-  }
-  
-  .column1 {
-    margin-right: 10rem;
-    width: 20rem;
+    justify-content: left;
+    text-align: left;
   }
   

@@ -134,8 +134,8 @@ export default function Landing() {
         <div>
             <div className="welcome">
                 <div className="intro">
-                    <h1>Hello from USB! </h1>
-                    <h2> Strengthening the Purdue Computing Student Experience since 1999 </h2>
+                    <h1 className = "h1-landing">Hello from USB! </h1>
+                    <h2 className= "h2-landing"> Strengthening the Purdue Computing Student Experience since 1999 </h2>
                     <ThemeProvider theme={theme}>
                         <Stack direction="row" spacing={2} justifyContent="center" marginTop={-6}>
                             <Button color="yellow" size="large" variant="outlined" startIcon={<MenuBookIcon />}
@@ -158,7 +158,7 @@ export default function Landing() {
             </div>
 
             <div className = "social">
-                <h1 class = "h1Social"> Stay Connected</h1>
+                <h1 className = "h1Social"> Stay Connected</h1>
 
                 <Slider {...settings}>
                     {postData.map((post) => (
@@ -170,8 +170,8 @@ export default function Landing() {
 
             <div className = "about">
                 <div className = "yellow-square" >
-                    <h2 style = {{fontWeight: 400, marginTop: '100px'}}> Our Mission</h2>
-                    <h3 style = {{marginTop: '-100px'}}> The Computer Science Undergraduate Student Board has been working since 1999 
+                    <h2 className = "h2-landing" style = {{fontWeight: 400, marginTop: '100px'}}> Our Mission</h2>
+                    <h3 className = "h3-landing" style = {{marginTop: '-100px', marginLeft: '25px'}}> The Computer Science Undergraduate Student Board has been working since 1999 
                         to improve the experience of undergraduates in the Computer Science Department at Purdue. 
                         We use our relationship with faculty, the Computer Science Corporate Partners Program, and 
                         administration to provide resources and promote community amongst CS/DS/AI undergraduates.</h3>
@@ -182,10 +182,10 @@ export default function Landing() {
                 </div>
 
                 <div className = "goals">
-                        <h1 style = {{marginLeft: '-800px',}}> About Us</h1>
-                        <div className = "objective">
+                        <h1 className= "h1-landing" style = {{marginLeft: '-800px',}}> About Us</h1>
+                        <div class= "objective">
                         <PieChartSharpIcon style ={{fontSize: "large"}}/>
-                        <h3 style = {{
+                        <h3 className="h3-landing" style = {{
                             marginTop: '75px',
                             padding: '16px', 
                             fontSize: '18px', 
@@ -197,7 +197,7 @@ export default function Landing() {
                         </div>
                         <div className = "objective">
                         <VolunteerActivismOutlinedIcon />
-                        <h3 style = {{
+                        <h3 className = "h3-landing" style = {{
                             marginTop: '75px',
                             padding: '16px', 
                             fontSize: '18px', 
@@ -210,7 +210,7 @@ export default function Landing() {
                         </div>
                         <div className = "objective">
                         <Diversity3OutlinedIcon />
-                        <h3 style = {{
+                        <h3 className = "h3-landing" style = {{
                             marginTop: '75px',
                             padding: '16px', 
                             fontSize: '18px', 
@@ -219,6 +219,7 @@ export default function Landing() {
                             both found on our website. We also connect upperclassmen to freshmen through 
                             our Mentorship initiative.</h3>
                         </div>
+
                         
                         
                 </div>

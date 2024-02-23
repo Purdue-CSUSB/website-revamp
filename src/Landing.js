@@ -187,7 +187,7 @@ export default function Landing() {
                         
                         <div class= "objective">
                         <div className = "objective-header" style = {{marginTop: '-180px'}}>
-                            <p> Academics and Corporate</p>
+                            <p className = "p-landing"> Academics and Corporate</p>
                              <PieChartSharpIcon style={{ fontSize: 50, color: '#d96fac'}}/>
                         </div>
                         <h3 className="h3-landing" style = {{
@@ -202,7 +202,7 @@ export default function Landing() {
                         </div>
                         <div className = "objective">
                         <div className = "objective-header" style = {{marginTop: '-50px'}}>
-                            <p>Community</p>
+                            <p className = "p-landing">Community</p>
                             <VolunteerActivismOutlinedIcon style={{ fontSize: 50, color: '#FFD700' }}/>
                         </div>
                         <h3 className = "h3-landing" style = {{
@@ -218,7 +218,7 @@ export default function Landing() {
                         </div>
                         <div className = "objective">
                         <div className = "objective-header" tyle = {{marginTop: '-120px'}}>
-                            <p>Guidance</p>
+                            <p className = "p-landing">Guidance</p>
                             <Diversity3OutlinedIcon style={{ fontSize: 50, color: '#3a4cc2' }} />
                         </div>
                         <h3 className = "h3-landing" style = {{

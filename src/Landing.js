@@ -170,8 +170,8 @@ export default function Landing() {
 
             <div className = "about">
                 <div className = "yellow-square" >
-                    <h2 className = "h2-landing" style = {{fontWeight: 400, marginTop: '100px'}}> Our Mission</h2>
-                    <h3 className = "h3-landing" style = {{marginTop: '-100px', marginLeft: '25px'}}> The Computer Science Undergraduate Student Board has been working since 1999 
+                    <h2 className = "h2-landing" style = {{fontWeight: 400, marginTop: '200px'}}> Our Mission</h2>
+                    <h3 className = "h3-landing" style = {{marginTop: '-100px', marginLeft: '100px'}}> The Computer Science Undergraduate Student Board has been working since 1999 
                         to improve the experience of undergraduates in the Computer Science Department at Purdue. 
                         We use our relationship with faculty, the Computer Science Corporate Partners Program, and 
                         administration to provide resources and promote community amongst CS/DS/AI undergraduates.</h3>
@@ -182,26 +182,34 @@ export default function Landing() {
                 </div>
 
                 <div className = "goals">
-                        <h1 className= "h1-landing" style = {{marginLeft: '-800px',}}> About Us</h1>
+                        <h1 className= "h1-landing" style = {{marginLeft: '-800px', marginTop: '50px'}}> About Us</h1>
+                        <h2 className = "h2-landing" style = {{fontWeight: 400, marginTop: '85px'}}> Our Objectives</h2>
+                        
                         <div class= "objective">
-                        <PieChartSharpIcon style ={{fontSize: "large"}}/>
+                        <div className = "objective-header" style = {{marginTop: '-180px'}}>
+                            <p> Academics and Corporate</p>
+                             <PieChartSharpIcon style={{ fontSize: 50, color: '#d96fac'}}/>
+                        </div>
                         <h3 className="h3-landing" style = {{
-                            marginTop: '75px',
+                            marginTop: '-150px',
+                            marginLeft: '25px',
                             padding: '16px', 
-                            fontSize: '18px', 
-                            textAlign: "right"
+                            fontSize: '20px',
                             }}> We want to support students both during and after 
                             their undergraduate experience, so we lead the freshman required course CS 193, provide corporate networking events for all students, 
                             and manage the Help Room and Tutor List for extra academic support.</h3>
 
                         </div>
                         <div className = "objective">
-                        <VolunteerActivismOutlinedIcon />
+                        <div className = "objective-header" style = {{marginTop: '-50px'}}>
+                            <p>Community</p>
+                            <VolunteerActivismOutlinedIcon style={{ fontSize: 50, color: '#FFD700' }}/>
+                        </div>
                         <h3 className = "h3-landing" style = {{
-                            marginTop: '75px',
+                            marginTop: '10px',
+                            marginLeft: '50px',
                             padding: '16px', 
-                            fontSize: '18px', 
-                            textAlign: "right"
+                            fontSize: '20px' 
                             }}> We care about building an inclusive and engaging community, so we offer ways to connect with other 
                             students and organizations through PenPals and Club Hub. We also give students a platform to 
                             connect with the department through Student Forum and Town Hall, and encourage their creativity 
@@ -209,12 +217,15 @@ export default function Landing() {
 
                         </div>
                         <div className = "objective">
-                        <Diversity3OutlinedIcon />
+                        <div className = "objective-header" tyle = {{marginTop: '-120px'}}>
+                            <p>Guidance</p>
+                            <Diversity3OutlinedIcon style={{ fontSize: 50, color: '#3a4cc2' }} />
+                        </div>
                         <h3 className = "h3-landing" style = {{
-                            marginTop: '75px',
+                            marginTop: '10px',
+                            marginLeft: '-50px',
                             padding: '16px', 
-                            fontSize: '18px', 
-                            textAlign: "right"
+                            fontSize: '20px'
                             }}>We maintain many sources of advice, including the Student Wiki and Blog, 
                             both found on our website. We also connect upperclassmen to freshmen through 
                             our Mentorship initiative.</h3>

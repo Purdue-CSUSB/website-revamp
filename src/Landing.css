@@ -21,7 +21,7 @@
 .h2-landing {
     text-align: center !important;
     font-family: "Gill Sans", sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 250;
     font-style: italic;
     height:fit-content;
@@ -32,7 +32,7 @@
 
 .h3-landing {
 
-    text-align: center !important;
+    text-align: justify;
     font-family: "Gill Sans", sans-serif;
     font-size: 20px;
     font-weight: 250;
@@ -45,6 +45,7 @@ p {
 
     /* padding: 2rem; */
     font-size: large;
+    font-family: "Gill Sans", sans-serif;
 }
 
 img {
@@ -101,15 +102,17 @@ img {
 
 .about {
 
-    height: 500px;
+    height: 600px;
     display: flex;
 }
 
 .yellow-square {
     background-color: #ffc700;
     width: 35%;
-    height: 500px;
-    text-align: center;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
 
 
 }
@@ -117,7 +120,7 @@ img {
 .yellow-triangle {
 	width: 0;
 	height: 0;
-	border-top: 500px solid transparent;
+	border-top: 700px solid transparent;
 	border-left: 300px solid #555;
     border-left-color:#ffc700;
 
@@ -125,18 +128,32 @@ img {
 
 .goals{
     width: 33%;
-    justify-content: right;
+    /* justify-content: right; */
     margin-left: 50px;
 }
 
 .objective {
 
-    display: flex;
+    display: flex; 
+    flex-direction: row;
     align-items: center;
     height: fit-content;
-    margin-top: -90px;
+    /* margin-top: -90px; */
+    margin-right: -95px;
 }
 
+
+.objective-header {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-weight: bold;
+    width: 600px;
+    margin-left: -50px;
+
+}
 
 
 

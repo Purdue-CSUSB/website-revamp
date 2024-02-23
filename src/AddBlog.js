@@ -127,7 +127,7 @@ function AddBlog() {
     formData.append("category", wikiCategory);
     
     console.log(formData);
-     axios.post("http://localhost:5000/add_wiki/", {title: wikiTitle,
+     axios.post("http://localhost:4000/add_wiki/", {title: wikiTitle,
       author: memberTemp, date: wikiDate, description: wikiDescription, 
       content: wikiContent, category: wikiCategory})
       .then((res) => (alert(res.data)))

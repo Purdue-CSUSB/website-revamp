@@ -181,7 +181,7 @@ export default function Landing() {
                 <div className = "yellow-triangle">
                 </div>
 
-                <div className = "goals">
+                <div className = "goals" style = {{marginTop: '-45px'}}>
                         <h1 className= "h1-landing" style = {{marginLeft: '-800px', marginTop: '50px'}}> About Us</h1>
                         <h2 className = "h2-landing" style = {{fontWeight: 400, marginTop: '85px'}}> Our Objectives</h2>
                         

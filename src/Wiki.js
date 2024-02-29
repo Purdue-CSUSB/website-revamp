@@ -24,15 +24,76 @@ function Wiki() {
     const [clubs, setClubs] = useState(false);
 
     let checkBoxes = [technical, campus, calendarEvents, clubs];
+    let categoryLabels = ["Technical", "Campus", "Calendar Events", "Clubs"]
 
 
 
     const [posts, setPosts] = useState([]);
     const [search, setSearch] = useState("");
-    
 
-    
+    function WikiCard(currentResults)  {
+        return (
+        <Stack spacing = {2}>
+            {currentResults.map((post, index) => (
+                        
+                <Card variant = "outlined" sx={{ height: 110, width: 610, borderRadius: 3, boxShadow: 1, border: 1, borderColor: '#C28E0F'}}>
+                    <CardContent>
+                        <Typography level="title-lg" sx = {{margin: '8px', color: '#C28E0F', fontFamily: "'Gill Sans', sans-serif"}}>
+                                {post.title}
+                        </Typography>
+                        <Typography level="title-sm" sx = {{margin: '8px', fontFamily: "'Gill Sans', sans-serif"}}>
+                            {post.description}
+                        </Typography>
+                     </CardContent>
+                </Card>
 
+             ))}
+
+         </Stack>
+
+        )
+        
+    }
+
+
+    const categoryFilterStyle = {
+        height: '20rem', 
+        width: '17%', 
+        marginLeft: '4rem', 
+        marginTop: '3rem', 
+        boxShadow: 3,
+        border: 1,
+        borderRadius: 3,
+        borderColor: '#C28E0F',
+        color: '#C28E0F'
+       
+      };
+
+      /* CURRENTLY WORKING ON THIS TO MAKE CODE EASIER TO UPDATE IN THE FUTURE */
+
+      function DisplayCategories() {
+
+        return (
+
+            checkBoxes.map((category, index) => (
+
+                <div className = "category">
+                    <p className = "p"> {categoryLabels[index]} </p> 
+                    <label>
+                        <input
+                            type = "checkbox" defaultChecked = {false}
+                            value = {category}
+                            onChange = {checkedBox}
+                            />
+                    </label>
+                 </div>
+
+            )
+
+            )
+        )
+
+      }
    useEffect(() => {
         axios.get('http://localhost:5000/get-wiki-posts')
         .then((response) => {
@@ -87,7 +148,7 @@ function Wiki() {
                         const calendar = currentResults.filter(post => post.category.toLowerCase().includes("calendar events"));
                         filteredResults.push(...calendar);
                     }
-                    else {
+                    if (index == 3) {
                         const clubs = currentResults.filter(post => post.category.toLowerCase().includes("clubs"));
                         filteredResults.push(...clubs);
                     }
@@ -105,29 +166,10 @@ function Wiki() {
                 }
             }
 
-
-
+            console.log(filteredResults);
 
             return (
-            
-                <Stack spacing = {2}>
-                    {currentResults.map((post, index) => (
-                        
-                            <Card variant = "outlined" sx={{ height: 110, width: 610, borderRadius: 3, boxShadow: 1, border: 1, borderColor: '#C28E0F'}}>
-                                <CardContent>
-                                    <Typography level="title-lg" sx = {{margin: '8px', color: '#C28E0F', fontFamily: "'Gill Sans', sans-serif"}}>
-                                        {post.title}
-                                    </Typography>
-                                    <Typography level="title-sm" sx = {{margin: '8px', fontFamily: "'Gill Sans', sans-serif"}}>
-                                        {post.description}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-
-                    ))}
-
-                </Stack>
-
+               WikiCard(currentResults)
             );
 
     };
@@ -173,19 +215,8 @@ function Wiki() {
 
             <div className = "content">
 
-                {/* <div className = "category-filter"> */}
-                <Box sx = {
-                    {height: '20rem', 
-                    width: '17%', 
-                    marginLeft: '4rem', 
-                    marginTop: '3rem', 
-                    boxShadow: 3,
-                    border: 1,
-                    borderRadius: 3,
-                    borderColor: '#C28E0F',
-                    color: '#C28E0F'}
-                    
-                    }>
+                <Box {...categoryFilterStyle}>
+                   
                     <div className = "category">
                         <p className = "p"> Technical </p> 
                         <label>
@@ -227,8 +258,6 @@ function Wiki() {
                         </label>
                     </div>
 
-
-                {/* </div> */}
                 </Box>
 
                 <div className = "wiki-scroll">

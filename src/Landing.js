@@ -150,7 +150,7 @@ export default function Landing() {
                 </div>
                 <div className="photo">
 
-                    <img src={require('./images/team2022.png')} />
+                    <img src={require('./images/usb_group_2023.webp')} />
 
                 </div>
 

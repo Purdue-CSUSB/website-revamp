@@ -35,8 +35,15 @@ function AddBlog() {
   const [linkDescription, setLinkDescription] = useState("")
   const [description, setDescription] = useState("")
 
+  const [wikiTitle, setWikiTitle] = useState("");
+  const [wikiAuthor, setWikiAuthor] = useState([]);
+  const [wikiDate, setWikiDate] = useState("");
+  const [wikiDescription, setWikiDescription] = useState("");
+  const [wikiContent, setWikiContent] = useState("");
+  const [wikiCategory, setWikiCategory] = useState("");
+
   useEffect(() => {
-    axios.get('http://localhost:5000/members/')
+    axios.get('http://localhost:4000/members/')
     .then(res => {
       // console.log(res.data)
       setMembers(res.data)
@@ -48,7 +55,7 @@ function AddBlog() {
 }, [members]);
 
   const addBlog = () => {
-    if (title === "" || author === "" || summary === "" || !selectedImage || !selectedFile || format == "") {
+    if (title === "" || author === "" || summary === "" || !selectedImage || !selectedFile) {
       alert("Enter all data");
       return;
     }
@@ -63,7 +70,7 @@ function AddBlog() {
     formData.append('format', format)
    // formData.append('content', content)
 
-    axios.post('http://localhost:5000/add-entry/', formData)
+    axios.post('http://localhost:4000/add-entry/', formData)
       .then((res) => (alert(res.data)))
       .catch((err) => (alert(err)));
     setTitle("");
@@ -83,7 +90,7 @@ function AddBlog() {
     formData.append('standing', standing.value)
     formData.append('linkedIn', linkedIn)
 
-    axios.post("http://localhost:5000/add-member/", formData)
+    axios.post("http://localhost:4000/add-member/", formData)
       .then((res) => (alert(res.data)))
       .catch((err) => alert(err));
   }
@@ -100,8 +107,29 @@ function AddBlog() {
 
     console.log(formData)
 
-    axios.post("http://localhost:5000/add-initiative/", {name: initiativeName,
+    axios.post("http://localhost:4000/add-initiative/", {name: initiativeName,
       description: description, members: memberTemp, link: link, linkDescription: linkDescription})
+      .then((res) => (alert(res.data)))
+      .catch((err) => alert(err));
+  }
+
+  const addWiki = () => {
+
+    const memberTemp = wikiAuthor.map((member) => member.value)
+    
+    const formData = new FormData();
+  
+    console.log(memberTemp)
+    formData.append("title", wikiTitle);
+    formData.append("date", wikiDate);
+    formData.append("description", wikiDescription);
+    formData.append("content", wikiContent);
+    formData.append("category", wikiCategory);
+    
+    console.log(formData);
+     axios.post("http://localhost:4000/add_wiki/", {title: wikiTitle,
+      author: memberTemp, date: wikiDate, description: wikiDescription, 
+      content: wikiContent, category: wikiCategory})
       .then((res) => (alert(res.data)))
       .catch((err) => alert(err));
   }
@@ -145,6 +173,31 @@ function AddBlog() {
           <input type = "text" value = {category} onChange = {(e) => setCategory(e.target.value)} />
           <br></br><br></br>
           <Button variant = "outlined" onClick={addBlog}>Add Blog</Button>
+           <h4> Add Wiki </h4>
+      
+      <p> Wiki title</p>
+      <input type = "text" value = {wikiTitle} onChange={(e) => setWikiTitle(e.target.value)} />
+      <p> Author(s)</p>
+      <p>Choose members</p>
+        <Select
+          isMulti
+          value = {wikiAuthor}
+          onChange = {selectedOptions => setWikiAuthor(selectedOptions)}
+          name="members"
+          options={memberList}
+          className="basic-multi-select"
+          classNamePrefix="select"
+        />
+        <p> Enter Date (mm/dd/yyyy)</p>
+      <input type = "text" value = {wikiDate} onChange={(e) => setWikiDate(e.target.value)} />
+      <p> Description</p>
+      <input type = "text" value = {wikiDescription} onChange={(e) => setWikiDescription(e.target.value)} />
+      <p> Content</p>
+      <input type = "text" value = {wikiContent} onChange={(e) => setWikiContent(e.target.value)} />
+      <p> Category</p>
+      <input type = "text" value = {wikiCategory} onChange={(e) => setWikiCategory(e.target.value)} />
+        <br></br><br></br>
+        <Button variant = "outlined" onClick={addWiki}>Add wiki</Button>
         </div>
     </div>
     <div className='column2'>

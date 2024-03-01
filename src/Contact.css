@@ -1,0 +1,79 @@
+.header {
+    color: #333;
+    text-align: left;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    font-family: Tahoma;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 106%; /* 90.1px */
+    font-variant: small-caps;
+    margin-bottom: 10px;
+}
+
+.faq {
+    color: #333;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 106%; /* 90.1px */
+    font-variant: small-caps;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.text {
+    color: #333;
+    text-align: left;
+    font-family: Tahoma;
+    margin: 0;
+    padding: 0px;
+}
+
+.text2 {
+    color: #333;
+    text-align: left;
+    font-family: Tahoma;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #6495ED;
+}
+
+small {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.custom-alert {
+    font-family: Tahoma;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.custom-alert.success {
+    background-color: #4CAF50; /* green */
+}
+
+.custom-alert.error {
+    background-color: #f44336; /* red */
+}
+
+.hidden {
+    display: none;
+}

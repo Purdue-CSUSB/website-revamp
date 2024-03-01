@@ -26,7 +26,7 @@ function Wiki() {
     
 
    useEffect(() => {
-        axios.get('http://localhost:5000/get-wiki-posts')
+        axios.get('http://localhost:4000/get-wiki-posts')
         .then((response) => {
             //const data = response.data;
             //console.log(data);

@@ -29,8 +29,10 @@ function BlogPost() {
         <Container maxWidth = "lg">
         <div className = "text">
           <h4>{state.blog.name}</h4>
+          
           <p>{state.blog.summary}</p>
           <p1>Authored by: {state.blog.author}</p1>
+          <hr></hr>
         </div>
         <div className='blog'>
           {(state.blog.format == "PDF" || !state.blog.format) &&

@@ -8,18 +8,26 @@
 h2 {
   
   text-align: center !important;
-  margin-bottom: 9rem !important;
-  margin-top: 3rem;
+  /*margin-bottom: 2% !important; */
+  margin-top: 2%;
   font-size: 2rem;
+}
+.hr {
+  margin-bottom: 2%;
+}
+h3 {
+  text-align: center !important;
+    margin-bottom: 1% !important;
+    font-size: 1rem;
 }
 .blogPost {
   max-width: 500px;
   display: flex;
   max-height: 500px;
-  margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
   color: black;
+  margin-bottom: 1%;
 }
 img {
   display: block;
@@ -55,15 +63,31 @@ img {
   font-size: large;
 }
 .blogs {
-  min-height: 100px;
+  min-height: 70px;
   max-height: auto;
   min-width: fit-content;
   justify-content: center;
   display: flex;
   margin: auto;
-  margin-left: 7rem;
-  margin-right: 1rem;
+  margin-left: 10%;
+  /*float: right;*/
+  margin-top: 10%;
+  
+}
+
+.blog_scroll {
+  overflow-y: auto;
+  max-height: 28.125rem;
+  
 }
 .column1 {
   width: fit-content;
+}
+.css-v4te19-MuiButtonBase-root-MuiButton-root {
+  color:black;
+}
+.selector {
+  margin-left: 5%;
+  justify-content: center;
+  background-color: bisque;
 }

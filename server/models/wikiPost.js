@@ -7,9 +7,10 @@ const WikiPostSchema = new Schema({
     title: {
       type: String,
     },
-    author: {
-      type: String,
-    },
+    members: [{
+        type: Schema.Types.ObjectId,
+        ref: "Members"
+      }],
     date: {
       type: String,
     },

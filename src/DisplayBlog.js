@@ -18,15 +18,24 @@ function DisplayBlog() {
     const [blogName, setBlogName] = useState(null);
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
+
+    const [student, setStudent] = useState(false);
+    const [faculty, setFaculty] = useState(false);
+    const [interviews, setInterviews] = useState(false);
+    const [blogChecked, setBlogCategory] = useState(false);
+
+    let checked = [student, faculty, interviews, blogChecked]
     const Button = styled(MuiButton)((props) => ({
       color: brown
     }));
+
+   
     useEffect(() => {
         /* if (selectedBlog) {
           axios.post("/get-blog", selectedBlog)
           .then(blogName => setBlogName(res.data))
         }  */
-        axios.get('http://localhost:5000/get-entries/')
+        axios.get('http://localhost:4000/get-entries/')
         .then(res => setBlog(res.data))
         .catch(err => console.error(err));   
         console.log(blogName) 
@@ -41,6 +50,9 @@ function DisplayBlog() {
           state= {{blog: blogs.find((code) => code._id === blog._id)}}
           >
           <Button 
+          sx = {{
+            color: 'black'
+          }}
               variant = "outlined">
               <figure class="item">
               <img src = {blog.image} />
@@ -62,17 +74,84 @@ function DisplayBlog() {
         
       );
   }
+
+  const checkedBox = (event) => {
+
+        if (event.target.value === "student") {
+            setStudent(event.target.checked);
+        }
+        else if (event.target.value == "faculty") {
+            setFaculty(event.target.checked);
+        }
+        else if (event.target.value == "interviews") {
+            setInterviews(event.target.checked);
+        }
+        else {
+          setBlogCategory(event.target.checked);
+        }
+    }
     return (
       <div className = "body">
-      <div className = "container1">
-      <h2>All Blog Posts</h2>
-      <div className = "blogs">
-        <Grid container spacing = {10} columns = {10}>
-        {
-              blogs.map(makeButton, this) 
-          }
-        </Grid>
-        </div>
+        <div className = "container1">
+          <h2>Humans of Purdue CS</h2>
+          <h3>Hear from the Awesome Student and Faculty at Purdue!</h3>
+          <hr></hr>
+          <div className = "content">
+            <div className='category-filter'>
+                <div className = "category">
+                        <p> Students </p> 
+                        <label>
+                            <input
+                                type = "checkbox" defaultChecked = {false}
+                                value = "students"
+                                onChange = {checkedBox}
+                            />
+                        </label>
+                </div>
+                <div className = "category">
+                        <p> Faculty </p> 
+                        <label>
+                            <input
+                                type = "checkbox" defaultChecked = {false}
+                                value = "faculty"
+                                onChange = {checkedBox}
+                            />
+                        </label>
+                </div>
+                <div className = "category">
+                        <p> Interviews </p> 
+                        <label>
+                            <input
+                                type = "checkbox" defaultChecked = {false}
+                                value = "interviews"
+                                onChange = {checkedBox}
+                            />
+                        </label>
+                </div>
+                <div className = "category">
+                        <p> Blog </p> 
+                        <label>
+                            <input
+                                type = "checkbox" defaultChecked = {false}
+                                value = "blog"
+                                onChange = {checkedBox}
+                            />
+                        </label>
+                </div>
+            </div>
+            
+          <div className = "blog_scroll">
+            <div className = "blogs">
+            <Grid container spacing = {10} columns = {10}>
+            {
+                  blogs.map(makeButton, this) 
+              }
+            </Grid>
+            </div>
+          </div>
+          </div>
+          
+        
       </div>
           
       </div>

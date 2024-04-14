@@ -7,7 +7,7 @@ import dev2 from '../src/images/dev-2.png';
 import dev3 from '../src/images/dev-3.png';
 import expandbtn from '../src/images/expand.png'
 
-const PTPProjectTemplate = ( {onClose} ) => {
+const PTPProjectTemplate = ( {onClose, project} ) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -30,7 +30,8 @@ const PTPProjectTemplate = ( {onClose} ) => {
       <div className={`modal-content ${isExpanded ? 'expanded-content' : ''}`} onClick={(e) => e.stopPropagation()}>
 
         <div className='overlay-headers'>
-          <h1 className='overlay-project-name'>NAME OF PROJECT</h1>
+          {/* <h1 className='overlay-project-name'>NAME OF PROJECT</h1> */}
+          <h1 className='overlay-project-name'>{project.projectName}</h1>
           {/* <button className="expand-button" onClick={toggleExpand}>
             {isExpanded ? 'Minimize' : 'Expand'}
           </button> */}
@@ -53,10 +54,15 @@ const PTPProjectTemplate = ( {onClose} ) => {
 
         <h2 className='what-header'>WHAT IS IT?</h2>
        
-        <p className='what-desc'>"
-        <span style={{ fontWeight: 'bold' }}>Some sort of main idea or header</span> <br/>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        <p className='what-desc'>
+        {/* <span style={{ fontWeight: 'bold' }}>Some sort of main idea or header</span> <br/> */}
+        <span style={{ fontWeight: 'bold' }}>{project.subheader}</span> <br/>
+        {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." */}
+        {project.description}
+        <br/>
+        <br/>
+        {project.whyfeature}
         </p>
 
           </div>
@@ -87,26 +93,28 @@ const PTPProjectTemplate = ( {onClose} ) => {
               </div>
             </div>
 
-            <h2>CREATIVE PROCESS</h2>
+            <h2 className='what-header'>CREATIVE PROCESS</h2>
           
             <p className='creative-process-desc'>
             <span style={{ fontWeight: 'bold' }}>Some sort of main idea or header</span> <br/>
-            Description of the creative process goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            {/* Description of the creative process goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." */}
+            {project.creativeproc}
             </p>
 
-            <h2>ADDITIONAL INFORMATION</h2>
+            <h2 className='what-header' >ADDITIONAL INFORMATION</h2>
             
             <p className='add-info-desc'>
             <span style={{ fontWeight: 'bold' }}>Some sort of main idea or header</span> <br/>
-            Description of the creative process goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            {/* Description of the creative process goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." */}
+            {project.addinfo}
             </p>
           </div>
         </div>

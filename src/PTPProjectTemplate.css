@@ -6,55 +6,88 @@ body {
   }
   
   .container {
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
   }
 
   
   .left-section,
   .right-section {
-    width: 50%;
+    /* width: 50%;
     padding: 20px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Courier New', Courier, monospace; */
+
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
   }
   
   .video-container {
+    /* margin-top: 20px;
+    margin-left: 17%; */
+
     margin-top: 20px;
-    margin-left: 17%;
   }
 
-  .what-header {
-    /* margin-bottom: 420px; */
-  }
+ 
 
-  .what-desc {
+  .what-header,
+.developer-header,
+.creative-process-header,
+.add-info-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+  /* .what-desc {
     text-align: left;
     margin-top: -18%;
     width: 75%;
     margin-left: 12%;
-  }
+  } */
+
+  .what-desc,
+.creative-process-desc,
+.add-info-desc {
+  text-align: left;
+  margin-top: -15%;
+  font-family: 'Montserrat';
+}
+
   
   .developer-images {
-    display: flex;
-    /* justify-content: space-between; */
-    /* letter-spacing: 7px; */
+    /* display: flex;
     margin-top: 20px;
-    margin-left: -3%;
-    /* margin-right: -420%; */
+    margin-left: -3%; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    
   }
   
   .developer-image {
+    /* text-align: center;
+    margin-left: 10%; */
     text-align: center;
-    margin-left: 10%;
 
   }
   
   .developer-image img {
-    width: 190px; /* Adjust as needed */
+    /* width: 190px; 
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
+
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+
   }
   
-  .caption1 {
+  /* .caption1 {
     font-size: 14px;
     margin-bottom: 5px;
     margin-top: 15px;
@@ -66,19 +99,25 @@ body {
     margin-bottom: 5px;
     margin-top: 5px;
     word-spacing: 1px;
-  }
+  } */
+
+  .caption1,
+.caption2 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
   
-  .creative-process-desc {
-    /* margin-top: -18px; */
+  /* .creative-process-desc {
+    
     margin-top: -18%;
     text-align: left;
-  }
+  } */
 
-  .add-info-desc {
+  /* .add-info-desc {
     margin-top: -18%;
     text-align: left;
 
-  }
+  } */
 
   .sub-sub-header {}
 

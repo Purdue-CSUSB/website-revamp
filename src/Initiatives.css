@@ -1,4 +1,102 @@
-.Hello {
-    color: #ffc700;
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+h1 {
+    text-align: center;
+    margin-top: 3%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+}
+
+p.desc {
+    font-size: 20px;
+    justify-content: center;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: -1%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+p.card-heading {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p.card-desc {
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex
+}
+
+.initiative-details {
+    width: fit-content;
+    margin-right: 3%;
+}
+
+.initiative-image {
+    width: 280px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.initiative-image img {
+    width: fit-content;
+}
+
+.initiative-card {
+    display: flex;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    margin-top: 4%;
+    margin-left: 4.6%;
+    margin-right: 4.6%;
+    height: fit-content;
+    box-shadow: 0px 0px 9px 2px rgb(226, 226, 226);
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        display: grid;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .initiative-card {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .initiative-card p {
+            margin-top: 20px;
+            /* Adjust spacing between elements */
+        }
+
+        .initiative-details {
+            width: inherit;
+            margin: inherit;
+            margin-top: 0;
+            margin-bottom: 2%;
+        }
+
+        .initiative-image {
+            align-self: center;
+            width: 120px;
+            height: auto;
+            margin-top: 3%;
+            margin-bottom: 0;
+            border-radius: 20px;
+        }
+        
+        .initiative-image img {
+            width: inherit;
+        }
+    }
 }

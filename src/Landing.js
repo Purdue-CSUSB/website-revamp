@@ -142,7 +142,7 @@ export default function Landing() {
                                 onClick={handleClick}>
                                 Read Student Wiki
                             </Button>
-                            <Button color="yellow" size="large" variant="outlined" startIcon={<TipsAndUpdatesIcon />}>
+                            <Button color="yellow" size="large" variant="outlined" startIcon={<TipsAndUpdatesIcon />} href="/initiatives">
                                 Explore Initiatives
                             </Button>
                         </Stack>

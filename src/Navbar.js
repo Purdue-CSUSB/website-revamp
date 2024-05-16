@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './Navbar.css';
 import Button from '@mui/material/Button';
 
@@ -29,7 +29,9 @@ export default function Navbar() {
             </li>
 
             <div class="dropdown">
-                <button class="dropbtn"> Initiatives </button>
+                <button class="dropbtn"> 
+                    <Link to = "/initiatives">Initiatives</Link>
+                </button>
                 <div class="dropdown-content">
                 <li>
                     <Link to = "/clubhub"> Club Hub </Link>

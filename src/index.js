@@ -20,6 +20,16 @@ import CS193 from "./CS193"
 import TownHall from "./TownHall"
 import Mentorship from './Mentorship';
 import Contact from './Contact';
+import Research from './Research';
+import StickySideNav from './StickySideNav';
+
+import Calendar from './rr_pages/calendar';
+import CSSpecific from './rr_pages/cs-specific';
+import CurrentProjects from './rr_pages/currProjects';
+import FAQ from './rr_pages/faq';
+import PresentingResearch from './rr_pages/presentingResearch';
+import ResearchOrgs from './rr_pages/researchOrgs';
+import URCSSR from './rr_pages/urcssr';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -52,10 +62,21 @@ root.render(
         <Route path = "/studentforum-townhall" element =  {<TownHall/>}/>
         <Route path = "/mentorship" element =  {<Mentorship/>}/>
         <Route path = "/contact" element =  {<Contact/>}/>
-
-
-
+        <Route path = "/research" element =  {<Research/>}/>
         </Routes>
+
+    <StickySideNav />
+       <Routes>
+        <Route exact path="/" element ={<Research />} />
+        <Route path = "/calendar" element={<Calendar />}  />
+        <Route path="/csSpecific" element={<CSSpecific/>} />
+        <Route path = "/currentProjects" element = {<CurrentProjects/>} />
+        <Route path = "/faq" element = {<FAQ/>} />
+        <Route path = "/presentingResearch" element = {<PresentingResearch/>} />
+        <Route path = "/researchOrgs" element =  {<ResearchOrgs/>}/>
+        <Route path = "/urcssr" element =  {<URCSSR/>}/>
+        
+      </Routes>
       </BrowserRouter>
   </React.StrictMode>
 );

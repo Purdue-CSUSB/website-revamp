@@ -1,0 +1,29 @@
+.video-container {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.quote {
+    margin-top: 20px;
+}
+
+.text {
+    margin-top: 20px;
+} 
+
+.research-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.side-nav {
+    flex: 0 0 auto;
+    width: 200px; /* Adjust width as needed */
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 20px; 
+}
+

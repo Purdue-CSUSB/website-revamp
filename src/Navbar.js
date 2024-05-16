@@ -49,6 +49,9 @@ export default function Navbar() {
                 <li>
                     <Link to = "/mentorship-penpals"> Mentorship </Link>
                 </li>
+                <li>
+                    <Link to = "/research"> Research Resources </Link>
+                </li>
                 
 
                    

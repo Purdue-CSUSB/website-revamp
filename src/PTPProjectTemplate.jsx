@@ -23,6 +23,10 @@ const PTPProjectTemplate = ( {onClose, project} ) => {
     window.open('https://www.linkedin.com/in/sarah-pushparaj/', '_blank');
   };
 
+  const devInfo = project.devinfo;
+  const developers = devInfo.split(';');
+  
+
   return (
     // <div className="modal-overlay" onClick={closeModal}>
     //   <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -69,29 +73,47 @@ const PTPProjectTemplate = ( {onClose, project} ) => {
 
           <div className="right-section">
             <h1>ALL ABOUT THE DEVELOPER(S)</h1>
-
             <div className="developer-images">
-              {/* Image 2 */}
+              {/* Loop through each developer and create HTML elements */}
+              {developers.map((developer, index) => {
+                // Split developer information into name, specialization, and year
+                const [name, specialization, year] = developer.trim().split(', ');
+
+                return (
+                  <div className="developer-image" key={index}>
+                    {/* Assuming you have dev1, dev2, ... images */}
+                    <img src={`dev${index + 1}`} alt={`Developer ${index + 1}`} onClick={openLinkedIn} />
+                    <div className="caption1">{name}</div>
+                    <div className="caption2">{`${specialization} ${year}`}</div>
+                  </div>
+                );
+              })}
+            </div>
+
+
+
+            {/* <div className="developer-images">
+              
               <div className="developer-image">
                 <img src={dev1} alt="Developer 2" onClick = {openLinkedIn} />
                 <div className="caption1">James Green</div>
                 <div className="caption2">DS 23'</div>
               </div>
 
-              {/* Image 2 */}
+              
               <div className="developer-image">
                 <img src={dev2} alt="Developer 2" onClick = {openLinkedIn}/>
                 <div className="caption1">James Green</div>
                 <div className="caption2">DS 23'</div>
               </div>
               
-              {/* Image 3 */}
+              
               <div className="developer-image">
                 <img src={dev3} alt="Developer 3" onClick = {openLinkedIn}/>
                 <div className="caption1">Sam Brown</div>
                 <div className="caption2">AI '22</div>
               </div>
-            </div>
+            </div> */}
 
             <h2 className='what-header'>CREATIVE PROCESS</h2>
           

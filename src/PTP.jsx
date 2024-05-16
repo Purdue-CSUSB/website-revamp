@@ -35,7 +35,8 @@ const PTP = () => {
           picture: boilerclasses,
           whyfeature: "Our source-code is fully open-source on GitHub and we're constantly looking to add more features to enhance the experience for students. We currently have a long feature list to implement, and we're looking for some open-source developers to help us in accomplishing this. We'd love to get this in front of as many Purdue CS students as possible!",
           creativeproc: "Surfing the current Purdue catalog is not exactly smooth — when we were looking to register for classes, we found that it was tough to find classes about specific topics we are interested in. Keeping this in mind, we decided to build a sleeker, faster, and more user-friendly alternative to the official catalog to help students explore the 9000+ courses offered at Purdue. Through feedback from the Purdue community, we've added a bunch of features since launching initially, and we hope to continue doing so. ",
-          addinfo: ""
+          addinfo: "",
+          devinfo: "Sarthak Mangla, CS, '26; Leon Yee, CS, '26; Soham Jog, CS, '26"
         },
         {
           projectName: "Boilerexams",
@@ -45,7 +46,8 @@ const PTP = () => {
           picture: boilerexams1,
           whyfeature: "Boilerexams is a site used by many Purdue students within engineering. It would be awesome for us to expand our reach past just first year engineering and letting more incoming students learn about us!",
           creativeproc: "Each team in our organization meets weekly or biweekly to discuss progress, figure out future plans, and come up with new ideas. We work with professors to find features they think would be useful for themselves or students, and talk with students who are studying to find pain points in the site and bugs to fix.",
-          addinfo: ""
+          addinfo: "",
+          devinfo: "Anirudh Kaza, CS, '26; Trevin Small, CS, '24; Lawrence Smith, '25, Computer Engineering; David Piedra, '26, Cybersecurity; Chris Farber, '26, CS; Nicole Bain, '26, CS; Shreya Venkat, '26, CS; Sonal Narasimha, '26, CS; Thomas Hughes, '26, CS; Kaden Hardesty, '25, CS; Matthew Gardner, '25, CS; Dylan Boyer, '26, CS; Anish Kambhampati, '26, CS;"
         },
         {
           projectName: "Project 4",
@@ -55,7 +57,8 @@ const PTP = () => {
           picture: hobbybook,
           whyfeature: "",
           creativeproc: "",
-          addinfo: ""
+          addinfo: "",
+          devinfo: ""
         },
         // ... add more projects as needed
       ];

@@ -95,6 +95,7 @@ function DisplayBlog() {
         <div className = "container1">
           <h2>Humans of Purdue CS</h2>
           <h3>Hear from the Awesome Student and Faculty at Purdue!</h3>
+          <p>The Purdue University Computer Science department, being one of the largest within the university, boasts a diverse and extensive pool of students, professors, and faculty with varied backgrounds. Our objective is to showcase the distinct stories and experiences of department members, providing a comprehensive understanding of our collective identity and accomplishments. By shining a spotlight on the unique experiences, passions, and backgrounds of those in the CS/DS/AI department, Purdue USB hopes to foster a greater sense of community, understanding, and collaboration within the department and beyond.</p>
           <hr></hr>
           <div className = "content">
             <div className='category-filter'>

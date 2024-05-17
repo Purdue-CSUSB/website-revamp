@@ -36,6 +36,7 @@ p.tidbit-desc {
 }
 
 h1.club-hub {
+    text-align: center;
     margin-top: 3%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 1000;

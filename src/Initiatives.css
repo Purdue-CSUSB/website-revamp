@@ -11,9 +11,6 @@ h1 {
 p.desc {
     font-size: 20px;
     justify-content: center;
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-top: -1%;
     font-family: 'Montserrat', sans-serif;
 
 }
@@ -36,11 +33,12 @@ p.card-desc {
 
 .initiative-details {
     width: fit-content;
-    margin-right: 3%;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .initiative-image {
-    width: 280px;
+    width: 300px;
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -49,20 +47,19 @@ p.card-desc {
 
 .initiative-image img {
     width: fit-content;
+    margin-left: 30px;
+    margin-right: 0;
 }
 
 .initiative-card {
     display: flex;
     border-radius: 15px;
-    margin-bottom: 50px;
-    margin-top: 4%;
-    margin-left: 4.6%;
-    margin-right: 4.6%;
+    margin: 15px;
     height: fit-content;
     box-shadow: 0px 0px 9px 2px rgb(226, 226, 226);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .container {
         display: grid;
     }
@@ -83,14 +80,14 @@ p.card-desc {
             width: inherit;
             margin: inherit;
             margin-top: 0;
-            margin-bottom: 2%;
+            margin-bottom: 15px;
         }
 
         .initiative-image {
             align-self: center;
-            width: 120px;
+            width: 0px;
             height: auto;
-            margin-top: 3%;
+            margin-top: 15px;
             margin-bottom: 0;
             border-radius: 20px;
         }

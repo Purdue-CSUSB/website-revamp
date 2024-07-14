@@ -1,15 +1,11 @@
 /* SideNav.css */
 
 .side-nav {
-    width: 200px;
+    position: sticky;
+    top: 72px;
+    margin: 20px;
+    margin-top: 72px;
+    width: 240px;
     background-color: #f4f4f4;
     padding: 20px;
-    flex: 0 0 auto;
   }
-  
-  .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  

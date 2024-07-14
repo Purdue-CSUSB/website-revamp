@@ -1,29 +1,24 @@
 .video-container {
     flex: 1;
-    margin-left: 20px;
+    max-width: max-content;
 }
 
-.quote {
-    margin-top: 20px;
-}
-
-.text {
-    margin-top: 20px;
-} 
-
-.research-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.side-nav {
-    flex: 0 0 auto;
-    width: 200px; /* Adjust width as needed */
+.side-content {
+    margin-left: 6%;
 }
 
 .main-content {
-    flex: 1;
-    margin-left: 20px; 
+    margin: 20px;
+    margin-right: 6%;
 }
 
+h4 {
+    margin-top: 54px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h5 {
+    font-size: large;
+    margin-bottom: 12px;
+}

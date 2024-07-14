@@ -21,15 +21,14 @@ import TownHall from "./TownHall"
 import Mentorship from './Mentorship';
 import Contact from './Contact';
 import Research from './Research';
-import StickySideNav from './StickySideNav';
 
-import Calendar from './rr_pages/calendar';
-import CSSpecific from './rr_pages/cs-specific';
-import CurrentProjects from './rr_pages/currProjects';
 import FAQ from './rr_pages/faq';
-import PresentingResearch from './rr_pages/presentingResearch';
-import ResearchOrgs from './rr_pages/researchOrgs';
+import CurrentProjects from './rr_pages/currProjects';
 import URCSSR from './rr_pages/urcssr';
+import ResearchOrgs from './rr_pages/researchOrgs';
+import PresentingResearch from './rr_pages/presentingResearch';
+import CSSpecific from './rr_pages/cs-specific';
+import Calendar from './rr_pages/calendar';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -57,26 +56,22 @@ root.render(
         <Route path="/initiatives" element={<Initiatives />} />
         <Route path="/clubhub" element={<ClubHub />} />
         <Route path="/ptp" element={<PTP />} />
-        <Route path="/internationalstudentresources" element={<International />} />
-        <Route path="/CS193" element={<CS193 />} />
+        <Route path="/isr" element={<International />} />
+        <Route path="/cs193" element={<CS193 />} />
         <Route path="/studentforum-townhall" element={<TownHall />} />
         <Route path="/mentorship" element={<Mentorship />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/research" element={<Research />} />
-      </Routes>
 
-      <StickySideNav />
-      <Routes>
-        <Route exact path="/" element={<Research />} />
-        <Route path="/calendar" element={<Calendar />} />
-        <Route path="/csSpecific" element={<CSSpecific />} />
-        <Route path="/currentProjects" element={<CurrentProjects />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/presentingResearch" element={<PresentingResearch />} />
-        <Route path="/researchOrgs" element={<ResearchOrgs />} />
-        <Route path="/urcssr" element={<URCSSR />} />
+        <Route path="/research/current-projects" element={<CurrentProjects />}/>
+        <Route path="/research/faq" element={<FAQ />}/>
+        <Route path="/research/urcssr" element={<URCSSR />}/>
+        <Route path="/research/orgs-and-programs" element={<ResearchOrgs />}/>
+        <Route path="research/presenting" element={<PresentingResearch />}/>
+        <Route path="research/cs-specific" element={<CSSpecific />}/>
+        <Route path="research/calendar" element={<Calendar />}/>
+
       </Routes>
-      
     </BrowserRouter>
   </React.StrictMode>
 );

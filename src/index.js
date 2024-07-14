@@ -24,7 +24,6 @@ import Research from './Research';
 
 import FAQ from './rr_pages/faq';
 import CurrentProjects from './rr_pages/currProjects';
-import URCSSR from './rr_pages/urcssr';
 import ResearchOrgs from './rr_pages/researchOrgs';
 import PresentingResearch from './rr_pages/presentingResearch';
 import CSSpecific from './rr_pages/cs-specific';
@@ -65,7 +64,6 @@ root.render(
 
         <Route path="/research/current-projects" element={<CurrentProjects />}/>
         <Route path="/research/faq" element={<FAQ />}/>
-        <Route path="/research/urcssr" element={<URCSSR />}/>
         <Route path="/research/orgs-and-programs" element={<ResearchOrgs />}/>
         <Route path="research/presenting" element={<PresentingResearch />}/>
         <Route path="research/cs-specific" element={<CSSpecific />}/>

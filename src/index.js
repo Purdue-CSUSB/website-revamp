@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App";
 import Navbar from "./Navbar";
+import PageNotFound from "./PageNotFound"
 import Landing from "./Landing";
 import AddBlog from "./AddBlog";
 import DisplayBlog from "./DisplayBlog";
@@ -39,9 +40,10 @@ root.render(
     </head>
     <Navbar />
        <Routes>
-        <Route exact path="/" element ={<Landing />} />
+        <Route exact path = "/" element ={<Landing />} />
+        <Route path = "*" element={<PageNotFound/>}/>
         <Route path = "/wiki" element={<Wiki />}  />
-        <Route path="/addBlog" element={<AddBlog/>} />
+        <Route path = "/addBlog" element={<AddBlog/>} />
         <Route path = "/displayBlog" element = {<DisplayBlog/>} />
         <Route path = "/blogPost" element = {<BlogPost/>} />
         <Route path = "/initiatives" element = {<Initiatives/>} />

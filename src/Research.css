@@ -1,0 +1,24 @@
+.video-container {
+    flex: 1;
+    max-width: max-content;
+}
+
+.side-content {
+    margin-left: 6%;
+}
+
+.main-content {
+    margin-right: 6%;
+    margin-bottom: 24px;
+}
+
+h4 {
+    margin-top: 72px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h5 {
+    font-size: large;
+    margin-bottom: 12px;
+}

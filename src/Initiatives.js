@@ -170,7 +170,7 @@ export default function BasicCard() {
           </p>
           <p>
             <ThemeProvider theme={theme}>
-              <Button color="yellow" size="large" variant='contained' href='/researchresources'>More Info</Button>
+              <Button color="yellow" size="large" variant='contained' href='/research'>More Info</Button>
             </ThemeProvider>
           </p>
         </div>

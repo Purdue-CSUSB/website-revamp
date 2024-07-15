@@ -58,31 +58,31 @@ function PresentingResearch() {
                 <div className="side-content"><StickySideNav /></div>
                 <div className="main-content" style={containerStyle}>
                     <div style={textContainerStyle}>
-                        <h4>Interested in Sharing Your Research?</h4>
+                        <h4>Interested in sharing your research?</h4>
                         <ul style={ulStyle}>
-                            <li style={liStyle}>PRESENTING YOUR RESEARCH IS A GREAT WAY TO GET FEEDBACK, CONNECT WITH OTHER RESEARCHERS, and Increase your EXPOSURE IN ACADEMIA. HERE ARE SOME WAYS TO SHARE AT PURDUE!</li>
+                            <li style={liStyle}>Presenting your research is a great way to get feedback, connect with other researchers, and increase your exposure in academia. Here are some ways to do so at Purdue!</li>
                             <li style={liStyle}>
                                 <h2 style={headerStyle}>Undergraduate Research Conferences</h2>
                                 <ul style={nestedUlStyle}>
                                     <li style={liStyle}>
-                                        <h3 style={headerStyle}>FALL UNDERGRADUATE Research Expo</h3>
+                                        <h3 style={headerStyle}>Fall Undergraduate Research Expo</h3>
                                         <ul style={nestedUlStyle}>
                                             <li style={liStyle}>Nov. 19-26, 2024</li>
                                             <li style={liStyle}>An excellent opportunity for undergraduate researchers to showcase the scholarly work and creative endeavors they have been engaged in through poster presentations or research talks.</li>
                                         </ul>
                                     </li>
                                     <li style={liStyle}>
-                                        <h3 style={headerStyle}>Spring UNDERGRADUATE Research Conference</h3>
+                                        <h3 style={headerStyle}>Spring Undergraduate Research Conference</h3>
                                         <ul style={nestedUlStyle}>
                                             <li style={liStyle}>April 8-15, 2025</li>
-                                            <li style={liStyle}>The largest showcase of undergraduate research AT PURDUE. This judged event highlights the scholarly work and creative endeavors undergraduate students have been engaged in through oral or poster presentations.</li>
+                                            <li style={liStyle}>The largest showcase of undergraduate research at Purdue. This judged event highlights the scholarly work and creative endeavors undergraduate students have been engaged in through oral or poster presentations.</li>
                                         </ul>
                                     </li>
                                     <li style={liStyle}>
                                         <h3 style={headerStyle}>Summer Undergraduate Research Symposium</h3>
                                         <ul style={nestedUlStyle}>
                                             <li style={liStyle}>July 25, 2024</li>
-                                            <li style={liStyle}>An opportunity for undergraduate researchers, especially those STAYING AT PURDUE DURING THE SUMMER, TO showcase the scholarly endeavors they have been engaged in through research talks or poster presentations.</li>
+                                            <li style={liStyle}>An opportunity for undergraduate researchers, especially those staying at Purdue during the summer, to showcase the scholarly endeavors they have been engaged in through research talks or poster presentations.</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -101,12 +101,12 @@ function PresentingResearch() {
                             <li style={liStyle}>
                                 <h2 style={headerStyle}>Undergraduate Research Seminar Series</h2>
                                 <ul style={nestedUlStyle}>
-                                    <li style={liStyle}>THIS PROGRAM CONTAINS GREAT RESOURCES ON DIFFERENT OPPORTUNITIES TO SHARE YOUR WORK, ATTEND THE PRESENTATIONS OF OTHERS, AND CONNECT WITH faculty projects.</li>
+                                    <li style={liStyle}>This program contains great resources on different opportunities to share your work, attend the presentations of others, and connect with faculty projects.</li>
                                     <li style={liStyle}>Upcoming: Apr 24, 4pm - Marketing your undergraduate research experiences</li>
                                 </ul>
                             </li>
                             <li style={liStyle}>
-                                <h2 style={headerStyle}>Need help with how to write about your research?</h2>
+                                <h4>Need help with writing about your research?</h4>
                                 <ul style={nestedUlStyle}>
                                     <li style={liStyle}>Journal of Purdue Undergraduate Research - Tips for Authors</li>
                                     <li style={liStyle}>Purdue Online Writing Lab (OWL)</li>

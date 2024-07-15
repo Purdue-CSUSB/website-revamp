@@ -18,7 +18,7 @@ function Research() {
                     </div>
                     <div>
                         <p>
-                            Hear from faculty, staff, and students in the CS Department about doing research.
+                            Hear from students, faculty, and staff in the CS Department about doing research.
                         </p>
                         <blockquote>
                             <i>"Computer scientists are creative problem solvers, and those problems exist everywhere. Interested in agriculture? Curious about chemistry? Have a love of languages? There are computer science problems to solve in all of those areas and beyond! Anything you can imagine, any unanswered question you can fathom is likely being explored at some level through a research project on Purdue's campus." </i>

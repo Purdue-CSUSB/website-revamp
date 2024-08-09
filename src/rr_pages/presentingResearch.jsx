@@ -1,6 +1,8 @@
 import React from "react";
 import { Stack } from "@mui/material";
 import StickySideNav from "../StickySideNav";
+import image1 from './images/presenting_1.jpg';
+import image2 from './images/presenting_2.jpg';
 
 function PresentingResearch() {
     const containerStyle = {
@@ -121,12 +123,12 @@ function PresentingResearch() {
                     <div style={imageContainerStyle}>
                         <div style={imageFrameStyle}>
                             {/* Placeholder for the first image */}
-                            <img src="path/to/your/image1.jpg" alt="Research Posters" style={{ width: '100%' }} />
+                            <img src={image1} alt="Research Posters" style={{ width: '100%' }} />
                             <div style={captionStyle}>Students presenting their research posters at the fall undergraduate research expo</div>
                         </div>
                         <div style={imageFrameStyle}>
                             {/* Placeholder for the second image */}
-                            <img src="path/to/your/image2.jpg" alt="JPUR Cover Page" style={{ width: '100%' }} />
+                            <img src={image2} alt="JPUR Cover Page" style={{ width: '100%' }} />
                             <div style={captionStyle}>
                                 Research article cover page in JPUR journal, vol 13. "Machine Learning of Big Data: A Gaussian Regression Model to Predict" by Jerry Gu (purdue.edu)
                             </div>

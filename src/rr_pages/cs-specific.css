@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+.main-content h4 { 
+    text-align: center;
+    margin-top: 3%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+}
+
+.main-content .text { 
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 0cm;
+
+}
+
+.research-with-prof h3 {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+
+}
+
+.research-with-prof .text {
+
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 0cm;
+
+
+
+}
+
+.research-with-prof h3 a {
+
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+
+    
+}
+
+
+
+
+.cs-departmental-research-areas h3 {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+
+}
+
+.cs-departmental-research-areas .text {
+
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 0cm;
+
+
+
+}
+
+.cs-departmental-research-areas h3 a {
+
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+
+    
+}
+
+
+.research-seminars h3 {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+
+}
+
+.research-seminars .text {
+
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 0cm;
+
+
+
+}
+
+.research-seminars h3 a {
+
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+
+    
+}
+
+
+.brightspace-page h3 {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+
+}
+
+.brightspace-page .text {
+
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 0cm;
+
+
+
+}
+
+.brightspace-page h3 a {
+
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+
+    
+}
+
+
+
+.questions h3 {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0px;
+
+}
+
+.questions .text {
+
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 0cm;
+
+
+
+}
+
+.questions .text a {
+
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 0cm;
+
+    
+}
+

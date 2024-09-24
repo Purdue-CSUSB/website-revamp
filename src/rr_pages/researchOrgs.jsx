@@ -35,19 +35,10 @@ function researchOrgs() {
                     </div>
                     <div>
                         <h5><a href="https://engineering.purdue.edu/Engr/Research/EURO"> Engineering Undergraduate Research Office (EURO) </a></h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo qui praesentium repellat? Quasi ipsam a asperiores sequi ad neque? Omnis nostrum illo praesentium nemo quisquam aspernatur cumque atque in magni.
-                            EURO provides more information on the
+                        <p>EURO provides more information on many undergraduate research opportunities at Purdue, including the
                             <a href="https://engineering.purdue.edu/Engr/Research/EURO/programs/ftr"> First Time Researcher (FTR) Fellowship</a> and the
                             <a href="https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF"> Summer Undergraduate Research Fellowship (SURF)</a>.
                         </p>
-                    </div>
-                    <div>
-                        <h5><a href="aaa"> Louis Stokes Alliance for Minority Participation (LSAMP) </a></h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo qui praesentium repellat? Quasi ipsam a asperiores sequi ad neque? Omnis nostrum illo praesentium nemo quisquam aspernatur cumque atque in magni.</p>
-                    </div>
-                    <div>
-                        <h5><a href="aaa"> First-Year Undergraduate Research Program </a></h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo qui praesentium repellat? Quasi ipsam a asperiores sequi ad neque? Omnis nostrum illo praesentium nemo quisquam aspernatur cumque atque in magni.</p>
                     </div>
                     <div>
                         <h5><a href="https://www.purdue.edu/discoverypark/duri/about/index.php"> Discovery Undergraduate Interdiscipliniary Research Internship (DUIRI) </a></h5>

@@ -14,7 +14,7 @@ function csSpecific() {
                 <StickySideNav />
             </div>
             <div className="main-content">
-                <h4> CS-Specific Research </h4>
+                <h4> CS-Specific Research</h4>
                 <div className='text'>
                     <p>Interested in doing undergraduate research related to your CS/DS/AI Degree but do not know where to start? Check out this list of helpful resources to learn more!</p>
                 </div>
@@ -22,11 +22,11 @@ function csSpecific() {
 
             <div className='research-with-prof' >
 
-                <h3>
-                    Undergraduate Research Opportunities with CS Professor
-                        <a href="https://www.cs.purdue.edu/corporate/employment/cs%20research.html"> (Click here)
+                <h5>
+                    {/* Undergraduate Research Opportunities with CS Professor */}
+                        <a href="https://www.cs.purdue.edu/corporate/employment/cs%20research.html"> Undergraduate Research Opportunities with CS Professor
                             </a>
-                </h3>
+                </h5>
 
                 <div className='text'>
                     <p> <strong> Description:</strong> An updated list of research projects with CS professors who are seeking undergraduate researchers.</p>
@@ -41,11 +41,11 @@ function csSpecific() {
 
             <div className="cs-departmental-research-areas" >
 
-                <h3>
-                    CS Departmental Research Areas
-                    <a href="https://www.cs.purdue.edu/research/index.html"> (Click here)
+                <h5>
+                    {/* CS Departmental Research Areas */}
+                    <a href="https://www.cs.purdue.edu/research/index.html"> Undergraduate Research Opportunities with CS Professor
                         </a>
-                </h3>
+                </h5>
 
                     <div className='text'>
                         <p> <strong> Description:</strong> A summary of the 14 major research areas within the CS Department and the supporting faculty for each.</p>
@@ -60,11 +60,11 @@ function csSpecific() {
 
             <div className="research-seminars" >
 
-                <h3>
-                        Research Seminars
-                        <a href="https://www.cs.purdue.edu/research/seminars.html"> (Click here)
+                <h5>
+                        {/* Research Seminars */}
+                        <a href="https://www.cs.purdue.edu/research/seminars.html">   Research Seminars
                             </a>
-                        </h3>
+                        </h5>
 
                         <div className='text'>
                             <p> <strong> Description:</strong> An updated list of various CS-Related seminar series and colloquiums.</p>
@@ -79,11 +79,11 @@ function csSpecific() {
 
             <div className="brightspace-page">
 
-                <h3>
-                        Computational Science Undergrad Research Brightspace Page
-                            <a href="https://purdue.brightspace.com/d2l/login?sessionExpired=1&target=%2fd2l%2fle%2fcontent%2f910376%2fviewContent%2f13784501%2fView"> (Click here)
+                <h5>
+                        {/* Computational Science Undergrad Research Brightspace Page */}
+                            <a href="https://purdue.brightspace.com/d2l/login?sessionExpired=1&target=%2fd2l%2fle%2fcontent%2f910376%2fviewContent%2f13784501%2fView"> Computational Science Undergrad Research Brightspace Page
                                 </a>
-                    </h3>
+                    </h5>
 
                         <div className='text'>
                             <p> <strong> Description:</strong> A list of all the undergraduate research programs that offer CS-related projects.</p>

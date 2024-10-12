@@ -108,6 +108,28 @@ app.post("/add-initiative", async(req, res) => {
          res.status(404).send(err.message);
       }
 })
+app.post("/add-project", async(req, res) => {
+   await client.connect();
+   try {
+      let project = {
+         name: req.body.name,
+         subheader: req.body.subheader,
+         description: req.body.description,
+         tag: req.body.tag,
+         image: req.body.image,
+         whyfeature: req.body.whyfeature,
+         creativeproc: req.body.creativeproc,
+         addinfo: req.body.addinfo,
+         devinfo: req.body.devinfo
+
+      }
+      const bl = client.db("Blogs").collection("PTP").insertOne(project);
+      res.status(200).send("success");
+   }
+   catch (err) {
+         res.status(404).send(err.message);
+      }
+})
 app.post("/add-member", upload.single("file"), async(req,res) => {
    const params = {
       Bucket:process.env.AWS_BUCKET_NAME,
